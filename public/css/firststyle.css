@@ -181,10 +181,10 @@ main {
 }
 
   @keyframes loader  {
-    from {
-      opacity: 1;
+    0%,99% {
+      opacity: 0.9;
     }
-    to {
+    100% {
       opacity: 0;
       visibility: hidden;
     }
