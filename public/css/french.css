@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/**width: 100%;
+border-radius: 4rem 4rem 0 0;
+background: whitesmoke;
+padding: 2rem;
+position: relative;
+margin-top: -4rem; ***/
+
+.header {
+    font-family: "Shrikhand", cursive;
+    font-size: 2.5rem;
+    z-index: 2;
+    height: 4.3rem;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: sticky;
+    background: #fff;
+}
+
+.header__logo {
+    height: 30px;
+    width: 173px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow__icon {
+    position: absolute;
+    cursor: pointer;
+    left: 20px;
+    top: 22px;
+}
+
+.material-icons {
+    font-size: 27px;
+    color: #000;
+}
+
+    /** BANNER IMG **/
+
+.hero__img {
+    object-fit: cover;
+    background-size: cover;
+    width: 100%;
+    max-height: 30rem;
+    background-position: center;
+}
+
+   /** BANNER IMG **/
+
+
+
+    /** SECTION MENU ("MENU-CONTAINER") STARTS **/
+
+.menu__container {
+    padding: 3rem;
+    border-radius: 0;
+}
+
+.menu__header {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.menu__title {
+    font-family: "Shrikhand", cursive;
+    font-size: 2.2rem;
+    font-style: italic;
+    text-align: end;
+}
+
+
+.favorite__icon {
+    cursor: pointer;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: 0.7s ease-in-out;
+    -webkit-text-fill-color: transparent;
+    grid-area: 1/2;
+    position: relative;
+    width: 0;
+}
+
+.favorite__icon:hover {
+    opacity: 1;
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+    transition: 0.7s ease-in;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 15%;
+}
+
+.favorite__icon--add {
+    opacity: 1;
+    cursor: pointer;
+    grid-area: 1/2;
+    width: 0%;
+}
+
+.favorite__icon--add:hover {
+    /* opacity: 1; */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.7s ease-in;
+    
+}
+
+ /** SECTION MENU ("MENU-CONTAINER") ENDS **/
+
+
+ /** SECTION MENU ("MENU-PRESENTATION") STARTS **/
+
+.menus__presentation {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.menu__description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.menu__description__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.menu__description__title::after {
+    content: "";
+    width: 4.2rem;
+    height: 0.3rem;
+    background: linear-gradient(90deg, rgba(153,226,208,1) 49%, rgba(147,86,220,1) 72%, rgba(255,121,218,1) 100%);
+    box-shadow : 0px 2px 5px 0px rgba(104,245,177,0.75);
+    position: absolute;
+    bottom: -1.1rem;
+    left: 0;
+}
+
+.menu__item {
+    background: #fff;
+    height: 5rem;
+    border-radius: 15px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    display: flex;
+    animation: slideup 1s forwards;
+    /* opacity: 0; */
+}
+
+.menu__item__content {
+    padding: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+.menu__item__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.menu__item__title {
+    font-size: 1.1rem;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu__item__information {
+    font-size: 1rem;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu__item__price {
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+}
+
+.menu__item__confirmation {
+    background-color: #99e2d0;
+    cursor: pointer;
+    height: auto;
+    width: 0;
+    opacity: 0;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease-in-out;
+}
+
+.menu__item:hover .menu__item__confirmation {
+    width: 15%;
+    transition: 0.4s ease-in;
+    opacity: 1;
+}
+
+span.check__icon {
+    color: #fff;
+    font-size: 2.3rem;
+}
+
+.check__icon:hover  {   
+    transform: rotate(360deg);
+    transition: 0.4s ease-in-out;
+}
+
+
+/** ORDER BTN SECTION STARTS **/
+
+.order__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.order__btn {
+    color: #fff;
+    padding: 1.1rem 3.2rem;
+    text-align: center;
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+    width: min-content;
+    white-space: nowrap;
+    margin: 4rem auto;
+    border-radius: 30px;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s ease-in-out;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    filter: brightness(105%);
+    box-shadow: rgb(50,50,93,0.25) 0px 30px 60px -12px, rgb(0,0,0,0.30) 0px 18px 36px -18px;
+}
+
+/** ORDER BTN SECTION ENDS **/
+
+/** SECTION MENU ("MENU-PRESENTATION") ENDS **/
+
+
+
+/*****  FOOTER SECTION STARTS  *****/
+
+footer {
+    background: #414343;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__logo {
+    font-size: 20px;
+    color: #fff;
+    font-family : 'Shrikhand', 'cursive';
+    display: flex;
+    margin: 0rem 0 2rem 0;
+    justify-content: start;
+}
+
+.footer__container {
+    padding: 2rem;   
+}
+
+.footer__list {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    list-style: none;
+}
+
+.footer__content {
+    margin-right: 4rem;
+}
+
+.footer__link {
+    color: #fff;
+}
+
+.footer__icon {
+    margin-right: 10px;
+}
+
+.fas.fa-hands-helping {
+    transform: rotate(-13deg);
+}
+
+@media  (max-width: 768px) {
+
+    .menu__container {
+        width: 100%;
+        border-radius: 4rem 4rem 0 0;
+        background: whitesmoke;
+        padding: 2rem;
+        position: relative;
+        margin-top: -4rem;
+    }
+    
+    
+}

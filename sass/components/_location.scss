@@ -1,0 +1,19 @@
+main {
+    position: relative;
+}
+
+.location {
+    background: $color-background;
+    font-weight: 500;
+    padding: 1.3rem;
+    @include flexible;
+    gap: 0.5rem;
+    border-top: 3px solid $color-background;
+    border-bottom: 1px solid $color-background;
+    &__text {
+    font-size: $font-size-repeat;
+    font-weight: $weight-bold;
+    margin-right: 0.7rem;
+}
+
+}

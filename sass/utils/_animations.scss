@@ -1,0 +1,207 @@
+.loader {
+    background: #fff;
+    opacity: 0.9;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-fill-mode: forwards;
+}
+ 
+    &__itemContainer {
+        @include flexible;
+        &__container{
+            -webkit-animation:animball_two 1s infinite linear;
+            -moz-animation:animball_two 1s infinite linear;
+            -ms-animation:animball_two 1s infinite linear;
+            animation:animball_two 1s infinite linear;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 4;
+            width:184px;
+            height:184px;
+    }
+}
+
+.ballcolor{
+    width:184px;
+    height:184px;
+    border-radius:50%;
+} 
+
+.ball_1, .ball_2, .ball_3, .ball_4  {
+    position:absolute;
+} 
+    
+&_1 {
+    border: 5px solid #ff79da;
+    top: 0;
+    left: 12px; 
+    &_2 {
+        border: 5px solid #99E2D0;
+        top: 0;
+        left: -17px;
+    }
+}
+    
+&_3 {
+    border: 5px solid #9356dc;
+    top: 12px;
+    left: 0;
+    &_4 {
+        border: 5px solid #9356DC;
+        top: -12px;
+        left: 0;
+    }
+} 
+    
+@-webkit-keyframes animball_two {
+  0% {
+      -webkit-transform:rotate(0deg);
+  } 
+  100% {
+      -webkit-transform:rotate(360deg);
+  }
+} 
+  
+@-moz-keyframes animball_two {
+  0% {
+      -moz-transform:rotate(0deg); 
+  } 
+  100% {
+      -moz-transform:rotate(360deg);
+  }
+} 
+  
+@-ms-keyframes animball_two {
+  0% {
+      -ms-transform:rotate(0deg);
+  }
+  100% {
+      -ms-transform:rotate(360deg); 
+  }
+} 
+
+@keyframes animball_two {
+  0% {
+      transform:rotate(0deg);
+  } 
+  100% {
+      transform:rotate(360deg);
+  }
+}
+
+@keyframes loader  {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+//  ANIMATION LOADER ENDS  //
+
+
+/*=====  ANIMATION ICONS STARTS  =====*/
+
+.menu__btn i {
+    position: relative;
+    left: 405px;
+    top: -65px;
+    color: black;
+    display: block;
+    font-size: 25px;
+}
+
+.card__like {
+    width: 15%;
+    height: 0;
+}
+
+
+.card__like:hover {
+    left: 405px;
+    bottom: 0;
+   height: 100%;
+   background: #fff;
+   transition: all 0.4s linear 0s;
+
+}
+
+.fas.fa-heart {
+    opacity: 0;
+}
+
+.fas.fa-heart:hover {
+    opacity: 1;
+    color: #ff79da;
+    background-color: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
+}
+
+
+/*=====  ANIMATION ICONS ENDS  =====*/
+
+
+
+
+
+
+  //  ANIMATION SLIDE UP STARTS  //
+
+  @keyframes slideup {
+    from {
+      transform: translatey(20px);
+      opacity: 0%;
+    }
+    to {
+      transform: translatey(0px);
+      opacity: 100%;
+    }
+  }
+  @keyframes fadein {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+  @keyframes fadeout {
+    from {
+      opacity: 100%;
+    }
+    to {
+      opacity: 0%;
+      visibility: hidden;
+    }
+  }
+ 
+  //  ANIMATION SLIDE UP ENDS  //
+
+// INTEGRATION ANIMATION CSS FRENCH //
+
+    //  ANIMATION OPACITY loader UP STARTS  //
+
+    @keyframes fadein {
+        from {
+          opacity: 0%;
+        }
+        to {
+          opacity: 100%;
+        }
+      }
+      @keyframes fadeout {
+        from {
+          opacity: 100%;
+        }
+        to {
+          opacity: 0%;
+          visibility: hidden;
+        }
+      }
+  //  ANIMATION OPACITY SPINNER UP ENDS  //

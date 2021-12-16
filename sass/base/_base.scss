@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*************
+EXEMPLE D'INFO LIGNE SASS DU PACKAGE JSON  
+ "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded --no-source-map"
+ ****************************************************************************
+ OU
+  "sass": "sass --watch ./sass/styles.scss:./public/css/style.css --style expanded (--no-source-map)"
+ **************/

@@ -1,0 +1,262 @@
+header {
+  font-family: "Shrikhand";
+  font-size: 2.5rem;
+  z-index: 2;
+  height: 4.3rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  background: #fff;
+  cursor: pointer;
+}
+header .__logo {
+  height: 30px;
+  width: 173px;
+}
+
+.arrow__icon {
+  position: absolute;
+  cursor: pointer;
+  left: 20px;
+  top: 22px;
+}
+
+span.material-icons {
+  font-size: 27px;
+  color: #000;
+}
+
+main {
+  position: relative;
+}
+
+.location {
+  background: #e6e6e6;
+  font-weight: 500;
+  padding: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-top: 3px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+.location__text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-right: 0.7rem;
+}
+
+.operation {
+  padding: 6rem 2rem;
+}
+.operation__title {
+  margin: 0 0 5rem 4.5rem;
+  position: relative;
+}
+.operation__title::after {
+  content: "";
+  width: 11rem;
+  height: 0.3rem;
+  background: linear-gradient(90deg, #99e2d0 49%, #9356dc 72%, #ff79da 100%);
+  box-shadow: 0px 2px 5px 0px rgba(104, 245, 177, 0.75);
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  border-radius: 8px;
+}
+
+.operation__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.order__card {
+  background: #ececec;
+  padding: 1.5rem 3.5rem;
+  box-shadow: 0px 5px 20px 0px #c0c0c0;
+  border-radius: 2rem;
+  margin: 0rem 1rem 2rem 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.order__card:hover {
+  background: #e8d7fd;
+}
+
+.order__card__number {
+  background: #9356dc;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: absolute;
+  left: -0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order__icon--colored {
+  color: #9356dc;
+}
+.order__icon--colored--classic {
+  color: #5f5f5f;
+}
+
+/*****  HERO SECTION INDEX STARTS *****/
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*=====  ADD BACKGROUND VERSION DESKTOP =====*/
+  background-image: url("images/restaurants/home-hero-bg.png");
+  /*=====  ADD BACKGROUND VERSION DESKTOP =====*/
+  background-position: center;
+  background-size: cover;
+}
+.hero--position {
+  padding: 5rem 2rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.__title {
+  font-size: 2.1rem;
+  padding: 2rem;
+}
+.__title__byline {
+  font-size: 1.2rem;
+}
+
+/*****  HERO SECTION INDEX ENDS *****/
+/*****  HERO SECTION A LA FRANCAISE STARTS *****/
+.hero__img {
+  object-fit: cover;
+  background-size: cover;
+  width: 100%;
+  max-height: 30rem;
+  background-position: center;
+}
+
+/*****  HERO SECTION A LA FRANCAISE ENDS *****/
+.home__title {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+.home__title::after {
+  content: "";
+  width: 8.6rem;
+  height: 0.3rem;
+  background: linear-gradient(90deg, #99e2d0 49%, #9356dc 72%, #ff79da 100%);
+  position: absolute;
+  bottom: -12px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px 0px rgba(104, 245, 177, 0.75);
+}
+
+.home__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem;
+  padding: 1rem;
+}
+.home__container__cards {
+  width: 29rem;
+  height: 280px;
+  border-radius: 20px;
+  margin: 1.5rem 3rem;
+  position: relative;
+  box-shadow: 0px 31px 40px -8px rgba(218, 218, 218, 0.75);
+}
+.home__container__cards:hover {
+  filter: brightness(110%);
+  box-shadow: -1px 8px 38px 1px rgba(125, 124, 124, 0.75);
+}
+
+.card__badge {
+  position: absolute;
+  left: 365px;
+  bottom: 225px;
+  background: #99e2d0;
+  padding: 0.6rem;
+  color: #01946f;
+  border-radius: 3px;
+}
+.card__badge__img {
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+  background-position: center;
+  width: 100%;
+  height: 180px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0 0 20px 20px;
+  line-height: 33px;
+}
+.card__content__title {
+  color: #000;
+  padding: 0.6em 0 0.4rem 0.9rem;
+}
+.card__content__title__location {
+  color: #000;
+  padding: 0 0 0.9rem 0.9rem;
+}
+
+footer {
+  background: #414343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer__container {
+  padding: 2rem;
+}
+footer__container__logo {
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Shrikhand";
+  display: flex;
+  margin: 0rem 0 2rem 0;
+  justify-content: start;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  list-style: none;
+}
+.footer__list__content {
+  margin-right: 4rem;
+}
+.footer__list__content__link {
+  color: #fff;
+}
+
+.__icon {
+  margin-right: 10px;
+}
+.__icon .fas.fa-hands-helping {
+  transform: rotate(-13deg);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+/*****  HERO SECTION INDEX STARTS *****/
+
+.hero {
+    @include flexible;
+    flex-direction: column;
+    /*=====  ADD BACKGROUND VERSION DESKTOP =====*/
+    background-image: url("images/restaurants/home-hero-bg.png");
+     /*=====  ADD BACKGROUND VERSION DESKTOP =====*/
+    background-position: center;
+    background-size: cover;
+    &--position {
+        padding: 5rem 2rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+
+.__title {
+    @include text-size(2.1rem);
+    padding: 2rem;
+    &__byline {
+        @include text-size;
+    }
+}
+
+/*****  HERO SECTION INDEX ENDS *****/
+
+
+
+
+/*****  HERO SECTION A LA FRANCAISE STARTS *****/
+
+.hero__img {
+    @include img-position;
+}
+
+/*****  HERO SECTION A LA FRANCAISE ENDS *****/
