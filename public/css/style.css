@@ -44,35 +44,59 @@ main {
   border-top: 3px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
-.location__text {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-right: 0.7rem;
+@media screen and (max-width: 768px) {
+  .location {
+    border-bottom: 1px solid #f2f2f2;
+    background: #e6e6e6;
+    border-top: 1px solid #f2f2f2;
+  }
+  .location__text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-right: 0.7rem;
+  }
 }
 
 .operation {
   padding: 6rem 2rem;
 }
-.operation__title {
-  margin: 0 0 5rem 4.5rem;
-  position: relative;
+@media screen and (max-width: 992px) {
+  .operation {
+    padding: 3.8rem;
+  }
+  .operation__title {
+    margin: 0 0 5rem 4.5rem;
+    position: relative;
+  }
 }
-.operation__title::after {
-  content: "";
-  width: 11rem;
-  height: 0.3rem;
-  background: linear-gradient(90deg, #99e2d0 49%, #9356dc 72%, #ff79da 100%);
-  box-shadow: 0px 2px 5px 0px rgba(104, 245, 177, 0.75);
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  border-radius: 8px;
+@media screen and (max-width: 992px) and (max-width: 992px) {
+  .operation__title {
+    margin: 0rem auto 3rem 10rem;
+  }
+  .operation__title::after {
+    content: "";
+    width: 11rem;
+    height: 0.3rem;
+    background: linear-gradient(90deg, #99e2d0 49%, #9356dc 72%, #ff79da 100%);
+    box-shadow: 0px 2px 5px 0px rgba(104, 245, 177, 0.75);
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    border-radius: 8px;
+  }
 }
 
 .operation__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+@media screen and (max-width: 992px) {
+  .operation__container {
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
 }
 
 .order__card {
@@ -87,8 +111,14 @@ main {
   align-items: center;
   gap: 2rem;
 }
-.order__card:hover {
-  background: #e8d7fd;
+@media screen and (max-width: 992px) {
+  .order__card {
+    margin: 1.5rem;
+    width: 60%;
+  }
+  .order__card:hover {
+    background: #e8d7fd;
+  }
 }
 
 .order__card__number {
@@ -237,6 +267,11 @@ footer__container__logo {
   margin: 0rem 0 2rem 0;
   justify-content: start;
 }
+@media screen and (max-width: 768px) {
+  footer__container__logo {
+    margin-left: 1rem;
+  }
+}
 
 .footer__list {
   display: flex;
@@ -248,8 +283,19 @@ footer__container__logo {
 .footer__list__content {
   margin-right: 4rem;
 }
-.footer__list__content__link {
-  color: #fff;
+@media screen and (max-width: 992px) {
+  .footer__list__content {
+    margin-right: 2.2rem;
+  }
+}
+@media screen and (max-width: 992px) and (max-width: 768px) {
+  .footer__list__content {
+    height: 35px;
+    padding: 1.5rem 0;
+  }
+  .footer__list__content__link {
+    color: #fff;
+  }
 }
 
 .__icon {

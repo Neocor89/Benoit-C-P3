@@ -54,8 +54,8 @@ margin-top: -4rem; ***/
     color: #000;
 }
 
-    /** BANNER IMG **/
 
+    /**  IMG BANNER  **/
 .hero__img {
     object-fit: cover;
     background-size: cover;
@@ -63,12 +63,11 @@ margin-top: -4rem; ***/
     max-height: 30rem;
     background-position: center;
 }
-
-   /** BANNER IMG **/
-
+   /**  IMG BANNER  **/
 
 
-    /** SECTION MENU ("MENU-CONTAINER") STARTS **/
+
+    /** SECTION MENU ("MENU-CONTAINER STARTS")  **/
 
 .menu__container {
     padding: 3rem;
@@ -93,6 +92,7 @@ margin-top: -4rem; ***/
 
 
 .favorite__icon {
+    opacity: 0;
     cursor: pointer;
     -webkit-background-clip: text;
     background-clip: text;
@@ -121,7 +121,6 @@ margin-top: -4rem; ***/
 }
 
 .favorite__icon--add:hover {
-    /* opacity: 1; */
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -129,10 +128,12 @@ margin-top: -4rem; ***/
     
 }
 
- /** SECTION MENU ("MENU-CONTAINER") ENDS **/
+ /** SECTION MENU ("MENU-CONTAINER END") **/
 
 
- /** SECTION MENU ("MENU-PRESENTATION") STARTS **/
+
+
+ /** SECTION MENU ("MENU-PRESENTATION STARTS")  **/
 
 .menus__presentation {
     display: grid;
@@ -163,6 +164,25 @@ margin-top: -4rem; ***/
     position: absolute;
     bottom: -1.1rem;
     left: 0;
+}
+
+.menu__description article {
+    animation: slideup 0.1s linear ease-in-out;
+}
+
+
+@keyframes slideup {
+    0% {
+      transform: translatey(-170px);
+      opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translatey(0px);
+        opacity: 1;
+    }
 }
 
 .menu__item {
@@ -244,7 +264,8 @@ span.check__icon {
 }
 
 
-/** ORDER BTN SECTION STARTS **/
+
+/**ORDER BTN SECTION STARTS**/
 
 .order__action {
     display: flex;
@@ -274,9 +295,13 @@ span.check__icon {
     box-shadow: rgb(50,50,93,0.25) 0px 30px 60px -12px, rgb(0,0,0,0.30) 0px 18px 36px -18px;
 }
 
-/** ORDER BTN SECTION ENDS **/
+/**ORDER BTN SECTION ENDS**/
 
-/** SECTION MENU ("MENU-PRESENTATION") ENDS **/
+
+
+/**  SECTION MENU ("MENU-PRESENTATION") ENDS  **/
+
+
 
 
 
@@ -324,16 +349,62 @@ footer {
     transform: rotate(-13deg);
 }
 
+/*****  FOOTER SECTION ENDS  *****/
+
+
+
+/** MEDIA QUERIES SECTION TABLET STARTS **/
+
+
+
+/** MEDIA QUERIES SECTION TABLET ENDS **/
+
+
+/**  -----VERIFICAT° DE TOUTES LES MEDIA QUERIES-----  **/
+
+
+/** MEDIA QUERIES SECTION MOBILE STARTS **/
+
 @media  (max-width: 768px) {
 
     .menu__container {
         width: 100%;
         border-radius: 4rem 4rem 0 0;
-        background: whitesmoke;
+        background: #e6e6e6;
         padding: 2rem;
         position: relative;
         margin-top: -4rem;
     }
     
-    
+    .menus__presentation {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    footer {
+        justify-content: start;
+    }
+
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+    }
+
+    .footer__list {
+        align-items: start;
+        margin: 0rem 0rem 1rem 1rem;
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        margin: 0;
+        margin-left: 1rem;
+    }
+
+    .footer__content {
+        height: 35px;
+        padding: 1.5rem 0;
+    }/*SCSS OK*/
+
 }
+    
+/** MEDIA QUERIES SECTION MOBILE ENDS **/

@@ -1,15 +1,13 @@
 .loader {
-    background: #fff;
+    background: $color-white;
     opacity: 0.9;
     position: fixed;
     height: 100%;
     width: 100%;
     top: 0;
     z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation-fill-mode: forwards;
+    @include flexible;
+    animation: loader 4s linear forwards;
 }
  
     &__itemContainer {
@@ -95,16 +93,42 @@
 }
 
 @keyframes loader  {
-  from {
-    opacity: 1;
+  0%,99% {
+    opacity: 0.9;
   }
-  to {
+  100% {
     opacity: 0;
     visibility: hidden;
   }
 }
 
 //  ANIMATION LOADER ENDS  //
+
+
+
+//  ANIMATION MENU PRESENTATION STARTS  //
+
+.menu__description article {
+  animation: slideup 0.1s linear ease-in-out;
+}
+
+
+@keyframes slideup {
+  0% {
+    transform: translatey(-170px);
+    opacity: 0;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      transform: translatey(0px);
+      opacity: 1;
+  }
+}
+
+//  ANIMATION MENU PRESENTATION ENDS  //
+
 
 
 /*=====  ANIMATION ICONS STARTS  =====*/

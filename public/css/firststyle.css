@@ -77,7 +77,7 @@ main {
 
 
 
-/*=======  ANIMATION LOADER STARTS  =========*/
+/**  ANIMATION LOADER STARTS  **/
 
 .loader {
     background: #fff;
@@ -90,15 +90,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: loader 4s linear forwards;
-    /* animation-fill-mode: forwards; */
+    animation: loader 4s steps(1) forwards;
 }
  
 .loader__itemContainer {
     display: flex;
     justify-content: center;
 }
-/*=======  INTEGRATION ANIMATION MULTI-NAVAIGATEURS  =========*/
+
+/**  INTEGRATION ANIMATION MULTI-Browser  **/
 .loader__container{
       -webkit-animation:animball_two 1s infinite linear;
       -moz-animation:animball_two 1s infinite linear;
@@ -201,7 +201,7 @@ main {
 } */
 
   
-/*=======  ANIMATION LOADER ENDS  =========*/
+/***  ANIMATION LOADER ENDS  ***/
  
 
 
@@ -385,7 +385,6 @@ main {
     content: "";
     width: 8.6rem;
     height: 0.3rem;
-    /* background-color: #99e2d0; */
     background: linear-gradient(90deg, rgba(153,226,208,1) 49%, rgba(147,86,220,1) 72%, rgba(255,121,218,1) 100%);
     position: absolute;
     bottom: -12px;
@@ -403,61 +402,77 @@ main {
 }
 
 
-/*=====  ANIMATION ICONS STARTS  =====*/
+/***  ANIMATION ICONS STARTS  ***/
+
+/**  MODIFICATIONS LE 16/12 VERIFICAT° DU CSS POUR CORRESPONDANCE  **/
 
 .menu__btn i {
     position: relative;
     left: 405px;
     top: -65px;
-    color: black;
+    /* color: black; */
     display: block;
     font-size: 25px;
+    
+}
+
+.menu__btn i:hover {
+    opacity: 1;
+    color: #ff79da; 
+    background-color: linear-gradient(162deg, #ff79da 50%, #9356dc 100%); 
 }
 
 .card__like {
     width: 15%;
     height: 0;
-    /* position: relative; */
+    opacity: 1;
+    color: #000;
+    
+    /* COEUR PLEIN */
 }
 
 
 .card__like:hover {
-    left: 405px;
+    /* Ajuster coeur 768px (left: 405px;) */
     bottom: 0;
+    opacity: 0;
    height: 100%;
-   background: #fff;
    transition: all 0.4s linear 0s;
+}
+
    /* position: absolute; grid-template-columns: repeat( auto-fill, minmax(400px, 1fr) );
    OU
    grid-template-columns: minmax(25rem, 1fr);
    OU
    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     column-gap: 2rem;
-
-
-
 }*/
+
+/* .far.fa-heart {
+    opacity: 1;
+    color: #000;
 }
+
+.far.fa-heart:hover {
+    opacity: 0;
+    background-color: transparent;
+} */
 
 .fas.fa-heart {
     opacity: 0;
-}
-
-.fas.fa-heart:hover {
-    opacity: 1;
     color: #ff79da;
     background-color: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
 }
 
+.fas.fa-heart:hover {
+    opacity: 1;
+}
 
-/*=====  ANIMATION ICONS ENDS  =====*/
+/** ICI FIN DES MODIFICATIONS LE 16/12 VERIFICAT° DU CSS POUR CORRESPONDANCE  **/
+
+/***  ANIMATION ICONS ENDS  ***/
 
 
-
-/* .fas.fa-heart {
-    
-    display: none;
-} */
 
 /*****  HOME SECTION ENDS  *****/
 
@@ -518,37 +533,37 @@ footer {
 @media  (max-width: 992px) {
 
   
-    .hero--position {
-        background-image: url("/Users/famil/Documents/test_P3/images/restaurants/bg_home_omf1.png");
-    }
+    /* .hero--position {
+        background-image: url("../restaurants/bg_home_omf1.png");
+    } */
 
     .operation__container{
         flex-direction: column;
         align-items: center;
         margin: auto;
-    }
+    } /* SCSS OK */
 
     .operation__title {
         margin: 0rem auto 3rem 10rem;
-    }
+    } /* SCSS OK */
 
     .order__card {
         margin: 1.5rem;
         width: 60%;
-    }
+    } /* SCSS OK */
 
     .operation {
         padding: 3.8rem;
-    }
+    } /* SCSS OK */
 
     .menu__btn i {
         left: 400px;
         font-size: 26px;
     }
 
-    .footer__listElt {
+    .footer__content {
         margin-right: 2.2rem;
-    }
+    } /* SCSS OK */
 
 }
 
@@ -714,7 +729,7 @@ footer {
         margin: 0;
     }
 
-    .footer__listElt {
+    .footer__content {
         height: 35px;
     }
 

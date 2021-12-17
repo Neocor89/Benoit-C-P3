@@ -1,19 +1,22 @@
 // INDEX FOOTER SECTION STARTS  //
 
 footer {
-  background: $color-footer;
-  @include flexible;
-  &__container {
-    padding: 2rem;   
-    &__logo {
-      font-size: $font-size-repeat;
-      color: $color-white;
-      font-family : $font-logo;
-      display: flex;
-      margin: 0rem 0 2rem 0;
-      justify-content: start;
+    background: $color-footer;
+    @include flexible;
+    &__container {
+        padding: 2rem;   
+        &__logo {
+            font-size: $font-size-repeat;
+            color: $color-white;
+            font-family : $font-logo;
+            display: flex;
+            margin: 0rem 0 2rem 0;
+            justify-content: start;
+            @include mobile-only {
+              margin-left: 1rem;
+            }
+        }
     }
-  }
     
 }
 
@@ -22,10 +25,17 @@ footer {
     margin: 1rem 0;
     list-style: none;
     &__content {
-      margin-right: 4rem;
-      &__link {
-        color: $color-white;
-      }
+        margin-right: 4rem;
+        @include tablet-only {
+            margin-right: 2.2rem;
+            @include mobile-only {
+              height: 35px;
+              padding: 1.5rem 0;
+              &__link {
+                  color: $color-white;
+              }
+            }
+        }
     }
 }
 
@@ -36,4 +46,4 @@ footer {
   }
 }
 
-// INDEX FOOTER SECTION ENDS  //
+// FOOTER SECTION ENDS  //
