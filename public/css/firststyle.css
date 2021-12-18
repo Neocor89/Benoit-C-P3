@@ -53,8 +53,8 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-top: 3px solid #e0e0e0;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 2px solid #f7f7f7;
+    border-top: 3px outset #d0d0d0;
 }
 
 .location__text {
@@ -63,15 +63,6 @@ main {
     margin-right: 0.7rem;
 }
 
-.hero {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url('images/restaurants/omf_bg.png') ;
-    background-position: center;
-    background-size: cover;
-}
 
 /******  SECTION LOCATION ENDS *****/
 
@@ -208,25 +199,32 @@ main {
 
 /***********  HERO SECTION STARTS ************/
 
+
+.hero {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .hero--position {
     padding: 5rem 2rem;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(270deg, #f5f7fa 0%, #e1fff3 100%);
     background-position: center;
     background-size: cover;
+
 }
 
 .hero__btn {
     color: #fff;
     padding: 1.3rem 3.2rem;
     text-align: center;
-    background: #ff79da;
     background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
     width: min-content;
     white-space: nowrap;
     margin: 4rem auto;
     border-radius: 30px;
     box-shadow: 0px 6px 20px -4px rgb(105,105,105,0.75);
-    
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
@@ -292,8 +290,8 @@ main {
 }
 
 .order__card:hover {
-    background: #e8d7fd;
-   
+    background: #ebdefa;
+   /*#e8d7fd*/
 }
 
 .order__icon--colored {
@@ -404,7 +402,7 @@ main {
 
 /***  ANIMATION ICONS STARTS  ***/
 
-/**  MODIFICATIONS LE 16/12 VERIFICAT° DU CSS POUR CORRESPONDANCE  **/
+/**  MODIFICATIONS LE 16/12: AJOUTER ANIMATION ICONS DANS SCSS  **/
 
 .menu__btn i {
     position: relative;
@@ -422,7 +420,7 @@ main {
     background-color: linear-gradient(162deg, #ff79da 50%, #9356dc 100%); 
 }
 
-.card__like {
+.card__icon {
     width: 15%;
     height: 0;
     opacity: 1;
@@ -432,7 +430,7 @@ main {
 }
 
 
-.card__like:hover {
+.card__icon:hover {
     /* Ajuster coeur 768px (left: 405px;) */
     bottom: 0;
     opacity: 0;
@@ -440,14 +438,7 @@ main {
    transition: all 0.4s linear 0s;
 }
 
-   /* position: absolute; grid-template-columns: repeat( auto-fill, minmax(400px, 1fr) );
-   OU
-   grid-template-columns: minmax(25rem, 1fr);
-   OU
-   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    column-gap: 2rem;
-}*/
-
+ 
 /* .far.fa-heart {
     opacity: 1;
     color: #000;
@@ -468,10 +459,9 @@ main {
     opacity: 1;
 }
 
-/** ICI FIN DES MODIFICATIONS LE 16/12 VERIFICAT° DU CSS POUR CORRESPONDANCE  **/
+/**  MODIFICATIONS LE 16/12: AJOUTER ANIMATION ICONS DANS SCSS  **/
 
-/***  ANIMATION ICONS ENDS  ***/
-
+   /***  ANIMATION ICONS ENDS  ***/
 
 
 /*****  HOME SECTION ENDS  *****/
@@ -507,7 +497,7 @@ footer {
     list-style: none;
 }
 
-.footer__listElt {
+.footer__content {
     margin-right: 4rem;
 }
 
@@ -532,11 +522,7 @@ footer {
 
 @media  (max-width: 992px) {
 
-  
-    /* .hero--position {
-        background-image: url("../restaurants/bg_home_omf1.png");
-    } */
-
+    
     .operation__container{
         flex-direction: column;
         align-items: center;
@@ -556,10 +542,14 @@ footer {
         padding: 3.8rem;
     } /* SCSS OK */
 
+    /**  MODIFICATIONS LE 16/12: AJOUT ANIMATION ICONS DANS SCSS EN ATTENTE  **/
+
     .menu__btn i {
         left: 400px;
         font-size: 26px;
     }
+
+    /**  MODIFICATIONS LE 16/12: AJOUT ANIMATION ICONS DANS SCSS EN ATTENTE  **/
 
     .footer__content {
         margin-right: 2.2rem;
@@ -576,114 +566,110 @@ footer {
 
 @media  (max-width: 768px) {
 
-    .location {
-        border-bottom: 1px solid #f2f2f2;
-        background: gainsboro;
-        border-top: 1px solid #f2f2f2;
-    }
 
     .location__text {
         font-size: 1.1em;
         font-weight: 500;
-    }
+    } /* SCSS OK */
+
+    .hero {
+        background: #F2F2F2;
+    } /* SCSS OK */
+
+    .hero--position {
+        background-color: #edeaed;
+        padding-top: 1rem;
+        padding-bottom: 0.4rem;
+    } /* SCSS OK */
 
     .hero__title {
         font-size: 1.6rem;
         padding-bottom: 1.1rem;
-    }
+    } /* SCSS OK */
 
     .hero__byline {
         font-size: 1rem;
-    }
+    } /* SCSS OK */
 
     .hero__btn {
         padding: 1.1rem 2rem;
-        font-size: 15px;
-    }
+        font-size: 1rem;
+    } /* SCSS OK */
 
     .operation {
          padding: 0;
-         padding-bottom: 3rem;
-    }
+    } /* SCSS OK */
 
     .operation__container{
         margin: auto 0.9rem;
-    }
+    } /* SCSS OK */
 
     .operation__title {
-            display: flex;
-            justify-content: start;
-            margin: 3rem 0rem 2rem 1rem;
-            font-size: 22px;
-    }
+        display: flex;
+        justify-content: start;
+        margin: 3rem 0rem 2rem 1rem;
+        font-size: 22px;
+    } /* SCSS OK */
     
     .operation__title::after {
         display: none;
-    }
+    } /* SCSS OK */
     
-    .home__tuto {
+    .home {
         padding-top: 3.5rem; 
-    }
+    } /* SCSS OK */
 
     .home__container {
         justify-content: center;
          margin: 0;
          padding-top: 0;
-         background-color: #fbf6fb;
-    }
+         background-color: #f2f2f2;
+    } /* SCSS OK */
 
     .home__cards {
         margin: 0 0 1.5rem 0;
         max-width: 100%;
         height: auto;
-    }
+    } /* SCSS OK */
 
     .order__card {
       width: 95%;
-      margin: 0rem auto 1rem auto;
+      margin: 0rem auto 1.5rem auto;
       padding: 1.5rem 1.8rem;
-    }
+    } /* SCSS OK */
 
     .order__card--colored {
-        background: #e8d7fd;
-    }
+        background: #ebdefa;
+    } /* SCSS OK */
 
     .order__card__number {
         width: 1.5rem;
         height: 1.5rem;
         left: -0.5rem;
-    }
+    } /* SCSS OK */
 
-    .order__icon--color, .order__icon--classic {
-        font-size: 20px;
-    }
-
+    
     .home__title {
         justify-content: start;
-        background: #fbf6fb;
+        background: #f2f2f2;
         padding: 2rem 0rem 1.5rem 1.2rem;
         margin: 0;
-    }
+    } /* SCSS OK */
 
     .home__title::after {
         display: none;
-    }
+    } /* SCSS OK */
 
     .order__text {
         font-size: 1rem;
-    }
+    } /* SCSS OK */
 
-    .hero--position {
-        background-image: none;
-        background-color: #edeaed;
-        padding-top: 1rem;
-        padding-bottom: 0.4rem;
-    }
 
     .card__content {
         line-height: 20px;
     }
-
+         /*  TODO: FIN ICI LE 18/12 = REPRENDRE ICI LES M.QUERIES (cARTE PRESENTATIONS DES RESTOS )  */
+         
     .card__badge {
         bottom: 210px;
         left: 235px;

@@ -2,21 +2,33 @@
     padding: 6rem 2rem;
     @include tablet-only {
         padding: 3.8rem;
-        &__title {
-            margin: 0 0 5rem 4.5rem;
-            position: relative;
-            @include tablet-only {
-                margin: 0rem auto 3rem 10rem;
-                &::after {
-                    content: "";
-                    width: 11rem;
-                    height: 0.3rem;
-                    background: linear-gradient(90deg, rgba(153,226,208,1) 49%, rgba(147,86,220,1) 72%, rgba(255,121,218,1) 100%);
-                    box-shadow : 0px 2px 5px 0px rgba(104,245,177,0.75);
-                    position: absolute;
-                    bottom: -12px;
-                    left: 0;
-                    border-radius: 8px;
+        @include mobile-only {
+            padding: 0;
+            &__title {
+                margin: 0 0 5rem 4.5rem;
+                position: relative;
+                @include tablet-only {
+                    margin: 0rem auto 3rem 10rem;
+                        @include mobile-only {
+                            display: flex;
+                            justify-content: start;
+                            margin: 3rem 0rem 2rem 1rem;
+                            font-size: 22px;
+                            &::after {
+                                content: "";
+                                width: 11rem;
+                                height: 0.3rem;
+                                background: linear-gradient(90deg, rgba(153,226,208,1) 49%, rgba(147,86,220,1) 72%, rgba(255,121,218,1) 100%);
+                                box-shadow : 0px 2px 5px 0px rgba(104,245,177,0.75);
+                                position: absolute;
+                                bottom: -12px;
+                                left: 0;
+                                border-radius: 8px;
+                                @include mobile-only {
+                                    display: none;
+                                }
+                            }
+                        }
                 }
             }
         }
@@ -32,6 +44,9 @@
         flex-direction: column;
         align-items: center;
         margin: auto;
+        @include mobile-only {
+            margin: auto 0.9rem;
+        }
     }
 }
 
@@ -48,22 +63,41 @@
     @include tablet-only {
         margin: 1.5rem;
         width: 60%;
-        &:hover {
-            background: #e8d7fd;
+        @include mobile-only {
+            width: 95%;
+            margin: 0rem auto 1rem auto;
+            padding: 1.5rem 1.8rem;
+            &:hover {
+                background: #ebdefa;
+            }
         }
     }
 }
-
-.order__card__number {
-    background: $color-secondary;
-    color: $color-white;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    position: absolute;
-    left: -0.8rem;
-    @include flexible;
+.order__card--colored {
+    @include mobile-only {
+        background: #ebdefa;
+        &__number {
+            background: $color-secondary;
+            color: $color-white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            position: absolute;
+            left: -0.8rem;
+            @include flexible;
+            @include mobile-only {
+                width: 1.5rem;
+                height: 1.5rem;
+                left: -0.5rem;
+                &__text {
+                    @include mobile-only {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
     }
+}
 
 
 .order__icon--colored {
