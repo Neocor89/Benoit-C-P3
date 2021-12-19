@@ -1,4 +1,5 @@
-                  /*******BASE PROPERTIES FONT*******/
+                 
+                 /*******BASE PROPERTIES FONT*******/
 
 * {
     margin: 0;
@@ -54,7 +55,7 @@ main {
     justify-content: center;
     gap: 0.5rem;
     border-bottom: 2px solid #f7f7f7;
-    border-top: 3px outset #d0d0d0;
+    border-top: 3px inset hsl(180deg 0% 100% / 16%);
 }
 
 .location__text {
@@ -401,66 +402,57 @@ main {
 
 
 /***  ANIMATION ICONS STARTS  ***/
-
-/**  MODIFICATIONS LE 16/12: AJOUTER ANIMATION ICONS DANS SCSS  **/
+/* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
 
 .menu__btn i {
     position: relative;
     left: 405px;
     top: -65px;
-    /* color: black; */
+    color: black;
     display: block;
-    font-size: 25px;
-    
+    font-size: 25px; 
 }
 
 .menu__btn i:hover {
     opacity: 1;
     color: #ff79da; 
-    background-color: linear-gradient(162deg, #ff79da 50%, #9356dc 100%); 
+    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%); 
 }
 
 .card__icon {
     width: 15%;
     height: 0;
-    opacity: 1;
-    color: #000;
-    
     /* COEUR PLEIN */
 }
 
 
 .card__icon:hover {
-    /* Ajuster coeur 768px (left: 405px;) */
     bottom: 0;
-    opacity: 0;
-   height: 100%;
-   transition: all 0.4s linear 0s;
+    transition: all 0.4s linear 0s;
+    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
 }
 
  
 /* .far.fa-heart {
     opacity: 1;
     color: #000;
-}
+}*/
 
-.far.fa-heart:hover {
-    opacity: 0;
-    background-color: transparent;
+/* .far.fa-heart:hover {
+    opacity: 1;
+    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
 } */
 
 .fas.fa-heart {
     opacity: 0;
-    color: #ff79da;
-    background-color: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
+    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
 }
 
 .fas.fa-heart:hover {
-    opacity: 1;
+    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
 }
 
-/**  MODIFICATIONS LE 16/12: AJOUTER ANIMATION ICONS DANS SCSS  **/
-
+/* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
    /***  ANIMATION ICONS ENDS  ***/
 
 
@@ -478,7 +470,7 @@ footer {
 }
 
 .footer__logo {
-    font-size: 20px;
+    font-size: 1.2rem;
     color: #fff;
     font-family : 'Shrikhand', 'cursive';
     display: flex;
@@ -542,14 +534,16 @@ footer {
         padding: 3.8rem;
     } /* SCSS OK */
 
-    /**  MODIFICATIONS LE 16/12: AJOUT ANIMATION ICONS DANS SCSS EN ATTENTE  **/
+
+    /* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
 
     .menu__btn i {
         left: 400px;
         font-size: 26px;
     }
 
-    /**  MODIFICATIONS LE 16/12: AJOUT ANIMATION ICONS DANS SCSS EN ATTENTE  **/
+    /* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
+
 
     .footer__content {
         margin-right: 2.2rem;
@@ -562,7 +556,7 @@ footer {
 
 
 
-/**------  MEDIA QUERIES HOME PAGE SMALL-SCREEN STARTS  ------**/
+/**------  MEDIA QUERIES HOME PAGE MOBILE STARTS  ------**/
 
 @media  (max-width: 768px) {
 
@@ -656,9 +650,11 @@ footer {
         margin: 0;
     } /* SCSS OK */
 
+
     .home__title::after {
         display: none;
     } /* SCSS OK */
+
 
     .order__text {
         font-size: 1rem;
@@ -667,17 +663,23 @@ footer {
 
     .card__content {
         line-height: 20px;
-    }
-         /*  TODO: FIN ICI LE 18/12 = REPRENDRE ICI LES M.QUERIES (cARTE PRESENTATIONS DES RESTOS )  */
-         
+    } /* SCSS OK */
+    
+    
     .card__badge {
-        bottom: 210px;
-        left: 235px;
         font-size: 15px;
         font-weight: 600;
-        padding: 0.5rem 1rem 0.5rem 1rem;
         border-radius: 2px;
-    }
+        top: 4%;
+        left: 74%;
+        right: 3%;
+        width: 80px;
+        height: 35px;
+        text-align: center;
+    } /* SCSS OK */
+
+
+    /* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
 
     .menu__btn {
         height: 0;
@@ -687,37 +689,39 @@ footer {
         top: -50px;
         font-size: 24px;
         right: 0;
-        left: 290px;
+        left: 88%;
     }
-    /*.menu__btn.card__btn {
-            position: relative;
-            left: -65px;
-            top: 0;
-        }*/
-
+   
+  /* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
+    
+    
     footer {
         justify-content: start;
-    }
+    } /* SCSS OK */
 
     .footer__container {
         display: flex;
         flex-direction: column;
         padding-left: 1rem;
-    }
+    } /* SCSS OK */
 
     .footer__list {
         align-items: start;
         margin: 1.5rem 0rem 0rem 0rem;
         flex-direction: column;
-    }
+    } /* SCSS OK */
 
     .footer__logo {
         margin: 0;
-    }
+    } /* SCSS OK */
 
     .footer__content {
         height: 35px;
-    }
+    } /* SCSS OK */
+
+    .fas.fa-utensils {
+        margin-right: 17px;
+    } /* SCSS OK */
 
 }
 

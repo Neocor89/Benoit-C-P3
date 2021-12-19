@@ -47,12 +47,13 @@ margin-top: -4rem; ***/
     cursor: pointer;
     left: 20px;
     top: 22px;
-}
-
-.material-icons {
-    font-size: 27px;
     color: #000;
 }
+
+/* .material-icons {
+    font-size: 27px;
+    color: rgba(0, 0, 0, 0.87);
+} */
 
 
     /**  IMG BANNER  **/
@@ -92,7 +93,7 @@ margin-top: -4rem; ***/
 
 
 .favorite__icon {
-    opacity: 0;
+    opacity: 1;
     cursor: pointer;
     -webkit-background-clip: text;
     background-clip: text;
@@ -104,8 +105,7 @@ margin-top: -4rem; ***/
 }
 
 .favorite__icon:hover {
-    opacity: 1;
-    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(56deg, #ff79da 0%, #9356dc 100%);
     transition: 0.7s ease-in;
     -webkit-background-clip: text;
     background-clip: text;
@@ -114,16 +114,18 @@ margin-top: -4rem; ***/
 }
 
 .favorite__icon--add {
-    opacity: 1;
+    /* opacity: 1; */
     cursor: pointer;
     grid-area: 1/2;
     width: 0%;
 }
 
 .favorite__icon--add:hover {
+    opacity: 0;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    background: linear-gradient(56deg, #ff79da 0%, #9356dc 100%);
     transition: 0.7s ease-in;
     
 }
@@ -278,7 +280,7 @@ span.check__icon {
     color: #fff;
     padding: 1.1rem 3.2rem;
     text-align: center;
-    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(56deg, #ff79da 0%, #9356dc 100%);
     width: min-content;
     white-space: nowrap;
     margin: 4rem auto;
@@ -352,10 +354,23 @@ footer {
 /*****  FOOTER SECTION ENDS  *****/
 
 
+/* TODO: ENTRER CODE + MEDIA QUERIES "FRENCH"  DANS SCSS + CHECKER SI DOUBLONS DANS FIRSTSTYLE */
+
 
 /** MEDIA QUERIES SECTION TABLET STARTS **/
 
+@media  (max-width: 992px) {
 
+    .menu__header {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .menus__presentation {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+}
 
 /** MEDIA QUERIES SECTION TABLET ENDS **/
 
@@ -369,16 +384,70 @@ footer {
 
     .menu__container {
         width: 100%;
-        border-radius: 4rem 4rem 0 0;
-        background: #e6e6e6;
-        padding: 2rem;
+        border-radius: 3rem 3rem 0 0;
+        background: #ededed;
+        padding: 2rem 1rem; /* TODO: TESTER CETTE VALLEUR EN 992PX */
         position: relative;
         margin-top: -4rem;
     }
     
-    .menus__presentation {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+    .menu__title {
+        font-size: 1.5rem;
+        text-align: start;
+        margin-left: 0;
+        padding-right: 2.5rem;
     }
+
+    .favorite__icon:hover {
+        width: 100%;
+    }
+ 
+    .menu__description {
+        gap: 1rem;
+    }
+
+    .menu__description__title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .menu__description__title::after {
+        width: 2.2rem;
+        height: 0.2rem;
+        background: #99e2d0;
+        box-shadow: none;
+        bottom: -0.5rem;
+    }
+
+    .menu__item {
+        height: 4.5rem;
+    }
+
+    .menu__item__title {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .menu__item__information {
+        font-size: .9rem;
+    }
+
+    .menu__item__content {
+        padding: 0.9rem
+    }
+
+   
+    .menu__header {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        display: grid;
+        place-content: space-between;
+    }
+
+    /* .menus__presentation {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    } */
+
     footer {
         justify-content: start;
     }

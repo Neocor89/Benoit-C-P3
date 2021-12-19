@@ -9,7 +9,7 @@ main {
     @include flexible;
     gap: 0.5rem;
     border-bottom: 2px solid $variant-bg;
-    border-top: 3px outset #d0d0d0;
+    border-top: 3px inset hsl(180deg 0% 100% / 16%);
     &__text {
         font-size: $font-size-repeat;
         font-weight: $weight-bold;

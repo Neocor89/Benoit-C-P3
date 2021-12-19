@@ -42,7 +42,7 @@ main {
   align-items: center;
   gap: 0.5rem;
   border-bottom: 2px solid #ececec;
-  border-top: 3px outset #d0d0d0;
+  border-top: 3px inset rgba(255, 255, 255, 0.16);
 }
 .location__text {
   font-size: 1.2rem;
@@ -322,12 +322,25 @@ main {
   color: #01946f;
   border-radius: 3px;
 }
-.card__badge__img {
-  border-radius: 20px 20px 0 0;
-  object-fit: cover;
-  background-position: center;
-  width: 100%;
-  height: 180px;
+@media screen and (max-width: 768px) {
+  .card__badge {
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 2px;
+    top: 4%;
+    left: 74%;
+    right: 3%;
+    width: 80px;
+    height: 35px;
+    text-align: center;
+  }
+  .card__badge__img {
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+    background-position: center;
+    width: 100%;
+    height: 180px;
+  }
 }
 
 .card__content {
@@ -338,13 +351,18 @@ main {
   border-radius: 0 0 20px 20px;
   line-height: 33px;
 }
-.card__content__title {
-  color: #000;
-  padding: 0.6em 0 0.4rem 0.9rem;
-}
-.card__content__title__location {
-  color: #000;
-  padding: 0 0 0.9rem 0.9rem;
+@media screen and (max-width: 768px) {
+  .card__content {
+    line-height: 20px;
+  }
+  .card__content__title {
+    color: #000;
+    padding: 0.6em 0 0.4rem 0.9rem;
+  }
+  .card__content__title__location {
+    color: #000;
+    padding: 0 0 0.9rem 0.9rem;
+  }
 }
 
 footer {
@@ -353,20 +371,32 @@ footer {
   justify-content: center;
   align-items: center;
 }
-footer__container {
-  padding: 2rem;
-}
-footer__container__logo {
-  font-size: 1.2rem;
-  color: #fff;
-  font-family: "Shrikhand";
-  display: flex;
-  margin: 0rem 0 2rem 0;
-  justify-content: start;
-}
 @media screen and (max-width: 768px) {
-  footer__container__logo {
-    margin-left: 1rem;
+  footer {
+    justify-content: start;
+  }
+  footer__container {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  footer__container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+  footer__container .footer__logo {
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: "Shrikhand";
+    display: flex;
+    margin: 0rem 0 2rem 0;
+    justify-content: start;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) and (max-width: 768px) {
+  footer__container .footer__logo {
+    margin: 0;
   }
 }
 
@@ -377,29 +407,40 @@ footer__container__logo {
   margin: 1rem 0;
   list-style: none;
 }
-.footer__list__content {
-  margin-right: 4rem;
+@media screen and (max-width: 768px) {
+  .footer__list {
+    align-items: start;
+    margin: 1.5rem 0rem 0rem 0rem;
+    flex-direction: column;
+  }
+  .footer__list__content {
+    margin-right: 4rem;
+  }
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) and (max-width: 992px) {
   .footer__list__content {
     margin-right: 2.2rem;
   }
 }
-@media screen and (max-width: 992px) and (max-width: 768px) {
+@media screen and (max-width: 768px) and (max-width: 992px) and (max-width: 768px) {
   .footer__list__content {
     height: 35px;
-    padding: 1.5rem 0;
   }
   .footer__list__content__link {
     color: #fff;
   }
 }
 
-.__icon {
+.footer__icon {
   margin-right: 10px;
 }
-.__icon .fas.fa-hands-helping {
-  transform: rotate(-13deg);
+@media screen and (max-width: 768px) {
+  .footer__icon .fas.fa-utensils {
+    margin-right: 17px;
+  }
+  .footer__icon .fas.fa-utensils .fas.fa-hands-helping {
+    transform: rotate(-13deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
