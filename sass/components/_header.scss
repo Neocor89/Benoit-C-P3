@@ -1,19 +1,48 @@
-// HEADER INDEX PAGE STARTS //
+
+//  HEADER HOME PAGE  //
 
 header {
     font-family: $font-logo;
     font-size: 2.5rem;
     z-index: 2;
     height: 4.3rem;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     top: 0;
     @include flexible;
     position: sticky;
     background: $color-white;
     cursor: pointer;
-    .__logo {
+    .header__logo {
     height: 30px;
     width: 173px;
+    }
+}
+
+
+
+.material-icons {
+    font-size: 28px;
+}
+
+
+
+
+//  HEADER RESATURANTS  //
+
+.header {
+    font-family: $font-logo;
+    font-size: 2.5rem;
+    z-index: 2;
+    height: 4.3rem;
+    top: 0;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    @include flexible;
+    position: sticky;
+    background: $color-white;
+    cursor: pointer;
+    &__logo {
+        height: 30px;
+        width: 173px;
+        @include flexible;
     }
 }
 
@@ -22,11 +51,11 @@ header {
     cursor: pointer;
     left: 20px;
     top: 22px;
-}
-
-span.material-icons {
-    font-size: 27px;
     color: $color-black;
+    font-size: 1.8rem;
+    font-weight: $weight-bold;
+    @include mobile-only {
+        left: 9px;
+        font-size: 1.5rem;
+    }
 }
-
-// HEADER INDEX PAGE PAGE ENDS //

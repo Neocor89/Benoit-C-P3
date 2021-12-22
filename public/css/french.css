@@ -12,12 +12,6 @@ a {
     text-decoration: none;
 }
 
-/**width: 100%;
-border-radius: 4rem 4rem 0 0;
-background: whitesmoke;
-padding: 2rem;
-position: relative;
-margin-top: -4rem; ***/
 
 .header {
     font-family: "Shrikhand", cursive;
@@ -32,7 +26,7 @@ margin-top: -4rem; ***/
     cursor: pointer;
     position: sticky;
     background: #fff;
-}
+} /* SCSS OK */
 
 .header__logo {
     height: 30px;
@@ -40,7 +34,7 @@ margin-top: -4rem; ***/
     display: flex;
     align-items: center;
     justify-content: center;
-}
+}  /* SCSS OK */
 
 .arrow__icon {
     position: absolute;
@@ -48,12 +42,9 @@ margin-top: -4rem; ***/
     left: 20px;
     top: 22px;
     color: #000;
-}
-
-/* .material-icons {
-    font-size: 27px;
-    color: rgba(0, 0, 0, 0.87);
-} */
+    font-size: 1.8rem;
+    font-weight: 700;
+} /* SCSS OK */
 
 
     /**  IMG BANNER  **/
@@ -63,7 +54,7 @@ margin-top: -4rem; ***/
     width: 100%;
     max-height: 30rem;
     background-position: center;
-}
+} /* SCSS OK */
    /**  IMG BANNER  **/
 
 
@@ -73,27 +64,34 @@ margin-top: -4rem; ***/
 .menu__container {
     padding: 3rem;
     border-radius: 0;
-}
+} /* SCSS OK */
 
 .menu__header {
     margin-top: 2rem;
     margin-bottom: 3rem;
-    gap: 1rem;
+    gap: 2rem;
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
-}
+} /* SCSS OK */
 
 .menu__title {
     font-family: "Shrikhand", cursive;
     font-size: 2.2rem;
     font-style: italic;
     text-align: end;
-}
+} /* SCSS OK */
+
+
+
+.material-icons {
+    font-size: 28px;
+} /* SCSS OK */
+
 
 
 .favorite__icon {
-    opacity: 1;
+    opacity: 0;
     cursor: pointer;
     -webkit-background-clip: text;
     background-clip: text;
@@ -101,33 +99,38 @@ margin-top: -4rem; ***/
     -webkit-text-fill-color: transparent;
     grid-area: 1/2;
     position: relative;
-    width: 0;
-}
-
+    width: 28px;
+    height: 28px;
+} /* SCSS OK */
+                                                                                        /* ! */
 .favorite__icon:hover {
     background: linear-gradient(56deg, #ff79da 0%, #9356dc 100%);
-    transition: 0.7s ease-in;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     width: 15%;
-}
+    opacity: 1;   
+} /* SCSS OK */
 
 .favorite__icon--add {
-    /* opacity: 1; */
+    opacity: 1;
     cursor: pointer;
     grid-area: 1/2;
-    width: 0%;
-}
+    width: 28px;
+    height: 28px;
+    min-height: auto;
+    min-width: auto;
+    display: block;   
+} /* SCSS OK */
 
 .favorite__icon--add:hover {
-    opacity: 0;
-    -webkit-background-clip: text;
+   opacity: 0;
+} /* SCSS OK */
+    /* -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    background: linear-gradient(56deg, #ff79da 0%, #9356dc 100%);
     transition: 0.7s ease-in;
-    
+    max-width: 0; 
 }
 
  /** SECTION MENU ("MENU-CONTAINER END") **/
@@ -141,13 +144,13 @@ margin-top: -4rem; ***/
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
-}
+} /* SCSS OK */
 
 .menu__description {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-}
+} /* SCSS OK */
 
 .menu__description__title {
     font-size: 1.5rem;
@@ -155,7 +158,7 @@ margin-top: -4rem; ***/
     text-transform: uppercase;
     margin-bottom: 2rem;
     position: relative;
-}
+} /* SCSS OK */
 
 .menu__description__title::after {
     content: "";
@@ -166,11 +169,11 @@ margin-top: -4rem; ***/
     position: absolute;
     bottom: -1.1rem;
     left: 0;
-}
+} /* SCSS OK */
 
 .menu__description article {
     animation: slideup 0.1s linear ease-in-out;
-}
+} /* SCSS OK */
 
 
 @keyframes slideup {
@@ -185,7 +188,7 @@ margin-top: -4rem; ***/
         transform: translatey(0px);
         opacity: 1;
     }
-}
+} /* SCSS OK */
 
 .menu__item {
     background: #fff;
@@ -194,7 +197,7 @@ margin-top: -4rem; ***/
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
     display: flex;
     animation: slideup 1s forwards;
-    /* opacity: 0; */
+    /* SCSS OK */
 }
 
 .menu__item__content {
@@ -205,7 +208,7 @@ margin-top: -4rem; ***/
     flex: 1;
     justify-content: space-between;
     gap: 1rem;
-}
+} /* SCSS OK */
 
 
 .menu__item__text {
@@ -214,27 +217,29 @@ margin-top: -4rem; ***/
     justify-content: space-between;
     overflow: hidden;
     white-space: nowrap;
-}
+} /* SCSS OK */
 
 .menu__item__title {
     font-size: 1.1rem;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
-}
+} /* SCSS OK */
 
 .menu__item__information {
     font-size: 1rem;
     font-weight: 300;
     overflow: hidden;
     text-overflow: ellipsis;
-}
+} /* SCSS OK */
 
 .menu__item__price {
     font-weight: 700;
     display: flex;
     align-items: flex-end;
-}
+} /* SCSS OK */
+
+
 
 .menu__item__confirmation {
     background-color: #99e2d0;
@@ -247,23 +252,23 @@ margin-top: -4rem; ***/
     align-items: center;
     justify-content: center;
     transition: 0.4s ease-in-out;
-}
+} /* SCSS OK */
 
 .menu__item:hover .menu__item__confirmation {
     width: 15%;
     transition: 0.4s ease-in;
     opacity: 1;
-}
+} /* SCSS OK */
 
 span.check__icon {
     color: #fff;
     font-size: 2.3rem;
-}
+} /* SCSS OK */
 
 .check__icon:hover  {   
     transform: rotate(360deg);
     transition: 0.4s ease-in-out;
-}
+} /* SCSS OK */
 
 
 
@@ -273,7 +278,7 @@ span.check__icon {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} /* SCSS OK */
 
 
 .order__btn {
@@ -290,12 +295,12 @@ span.check__icon {
     border: none;
     transition: 0.2s ease-in-out;
     font-size: 1.2rem;
-}
+} /* SCSS OK */
 
 .btn:hover {
     filter: brightness(105%);
     box-shadow: rgb(50,50,93,0.25) 0px 30px 60px -12px, rgb(0,0,0,0.30) 0px 18px 36px -18px;
-}
+} /* SCSS OK */
 
 /**ORDER BTN SECTION ENDS**/
 
@@ -313,7 +318,7 @@ footer {
     background: #414343;
     display: flex;
     justify-content: center;
-}
+} /* SCSS OK */
 
 .footer__logo {
     font-size: 20px;
@@ -326,90 +331,104 @@ footer {
 
 .footer__container {
     padding: 2rem;   
-}
+} /* SCSS OK */
 
 .footer__list {
     display: flex;
     align-items: center;
     margin: 1rem 0;
     list-style: none;
-}
+} /* SCSS OK */
 
 .footer__content {
     margin-right: 4rem;
-}
+} /* SCSS OK */
 
 .footer__link {
     color: #fff;
-}
+} /* SCSS OK */
 
 .footer__icon {
     margin-right: 10px;
-}
+} /* SCSS OK */
 
 .fas.fa-hands-helping {
     transform: rotate(-13deg);
-}
+} /* SCSS OK */
 
 /*****  FOOTER SECTION ENDS  *****/
 
 
-/* TODO: ENTRER CODE + MEDIA QUERIES "FRENCH"  DANS SCSS + CHECKER SI DOUBLONS DANS FIRSTSTYLE */
+/* TODO: ENTRER MEDIA QUERIES "FRENCH"  DANS SCSS + CHECKER SI DOUBLONS DANS FIRSTSTYLE */
 
 
 /** MEDIA QUERIES SECTION TABLET STARTS **/
 
 @media  (max-width: 992px) {
 
-    .menu__header {
-        display: flex;
-        justify-content: space-evenly;
-    }
     
     .menus__presentation {
         grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
+    } /* SCSS OK */
+
+    .menu__description__title {
+        font-size: 1.2rem;
+    } /* SCSS OK */
+
+    .menu__item__title {
+        font-weight: 700;
+    } /* SCSS OK */
 
 }
 
 /** MEDIA QUERIES SECTION TABLET ENDS **/
 
 
-/**  -----VERIFICAT° DE TOUTES LES MEDIA QUERIES-----  **/
+
 
 
 /** MEDIA QUERIES SECTION MOBILE STARTS **/
 
 @media  (max-width: 768px) {
 
+    /* SCSS OK */
+    .arrow__icon {
+        left: 9px;
+        font-size: 1.5rem;
+    } 
+
+    .hero__img {
+        max-height: 25rem;
+    } /* SCSS OK */
+
     .menu__container {
         width: 100%;
         border-radius: 3rem 3rem 0 0;
         background: #ededed;
-        padding: 2rem 1rem; /* TODO: TESTER CETTE VALLEUR EN 992PX */
+        padding: 2rem 1rem; 
         position: relative;
         margin-top: -4rem;
-    }
+    } /* SCSS OK */
     
     .menu__title {
         font-size: 1.5rem;
         text-align: start;
         margin-left: 0;
         padding-right: 2.5rem;
-    }
+    } /* SCSS OK */
 
     .favorite__icon:hover {
         width: 100%;
-    }
+    } /* SCSS OK */
  
     .menu__description {
         gap: 1rem;
-    }
+    } /* SCSS OK */
 
     .menu__description__title {
         font-size: 1rem;
         margin-bottom: 0.5rem;
-    }
+    } /* SCSS OK */
 
     .menu__description__title::after {
         width: 2.2rem;
@@ -417,62 +436,63 @@ footer {
         background: #99e2d0;
         box-shadow: none;
         bottom: -0.5rem;
-    }
+    } /* SCSS OK */
 
     .menu__item {
         height: 4.5rem;
-    }
+    } /* SCSS OK */
 
     .menu__item__title {
         font-size: 1rem;
-        font-weight: 700;
-    }
+    } /* SCSS OK */
 
     .menu__item__information {
         font-size: .9rem;
-    }
+    } /* SCSS OK */
 
     .menu__item__content {
         padding: 0.9rem
-    }
+    } /* SCSS OK */
 
+    .menu__item:hover .menu__item__confirmation {
+        width: 20%;
+    } /* SCSS OK */
    
     .menu__header {
         margin-top: 0;
         margin-bottom: 2rem;
         display: grid;
         place-content: space-between;
-    }
+    } /* SCSS OK */
 
-    /* .menus__presentation {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    } */
+    span.check__icon {
+        font-size: 1.9rem;
+    } /* SCSS OK */
 
     footer {
         justify-content: start;
-    }
+    } /* SCSS OK */
 
     .footer__container {
         display: flex;
         flex-direction: column;
         padding-left: 1rem;
-    }
+    } /* SCSS OK */
 
     .footer__list {
         align-items: start;
-        margin: 0rem 0rem 1rem 1rem;
+        margin: 0rem 0rem 1rem 0;
         flex-direction: column;
-    }
+    } /* SCSS OK */
 
     .footer__logo {
         margin: 0;
-        margin-left: 1rem;
-    }
+    } /* SCSS OK */
 
     .footer__content {
         height: 35px;
-        padding: 1.5rem 0;
-    }/*SCSS OK*/
+        padding: 1.2rem 0;
+    }
 
 }
     

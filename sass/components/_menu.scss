@@ -2,47 +2,64 @@
 .menu__container {
     padding: 3rem;
     border-radius: 0;
-    &__header {
-       margin-top: 2rem;
-       margin-bottom: 3rem;
-       gap: 1rem;
-       display: grid;
-       grid-template-columns: $auto-grid $auto-grid;
-       align-items: $flex-position;
+    @include mobile-only {
+        width: 100%;
+        border-radius: 3rem 3rem 0 0;
+        background: $color-background;
+        padding: $col-gap 1rem; 
+        position: relative;
+        margin-top: -4rem;
+    }
+}
+
+.menu__header {
+    margin-top: $col-gap;
+    margin-bottom: 3rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: $auto-grid $auto-grid;
+    align-items: $flex-position;
+    @include mobile-only {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        display: grid;
+        place-content: space-between;
         &__title {
-          font-family: $font-logo;
-          font-size: 2.2rem;
-          font-style: italic;
-          text-align: end;
+            font-family: $font-logo;
+            font-size: 2.2rem;
+            font-style: italic;
+            text-align: end;
+            @include mobile-only {
+                font-size: 1.5rem;
+                text-align: start;
+                margin-left: 0;
+                padding-right: 2.5rem;
+            }
         }
     }
 }
 
 
-.favorite__icon {
-    cursor: pointer;
-    opacity: 0;
-    background: linear-gradient(162deg, $color-primary 0%, $color-secondary 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    grid-area: 1/2;
-    transition: opacity 0.3s ease-in-out;
-    position: relative;
-    &--add {
-       cursor: pointer;
-       grid-area: 1/2;
-       transition: color 0.2s ease-in-out;
-       color: linear-gradient(162deg, $color-primary 0%, $color-secondary 100%);
-    }
-}
+
+ /** SECTION MENU ("MENU-CONTAINER END") **/
+
+
+
+ /** SECTION MENU ("MENU-PRESENTATION STARTS")  **/
 
 .menus__presentation {
     @include grid-position;
-    &__description { 
-       display: flex;
-       flex-direction: column;
-       gap: $col-gap;
+    gap: $col-gap;
+    @include tablet-only {
+        grid-template-columns: repeat(1, minmax(0, $grid-size));
+        &__description { 
+            display: flex;
+            flex-direction: column;
+            gap: $col-gap;
+            @include mobile-only {
+                gap: 1rem;
+            }
+        }    
     }
 }
 
@@ -50,17 +67,31 @@
     font-size: 1.5rem;
     font-weight: $weight-regular;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: $col-gap;
     position: relative;
-    &::after {
-       content: "";
-       width: 4.2rem;
-       height: 0.3rem;
-       background: linear-gradient(90deg, rgba(153,226,208,1) 49%, rgba(147,86,220,1) 72%, rgba(255,121,218,1) 100%);
-        box-shadow : 0px 2px 5px 0px rgba(104,245,177,0.75);
-       position: absolute;
-       bottom: -1.1rem;
-       left: 0;
+    @include tablet-only {
+        font-size: $font-size-repeat;
+        @include mobile-only {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            &::after {
+                content: "";
+                width: 4.2rem;
+                height: 0.3rem;
+                background: linear-gradient(90deg, rgba(153,226,208,1) 49%, rgba(147,86,220,1) 72%, rgba(255,121,218,1) 100%);
+                box-shadow : 0px 2px 5px 0px rgba(104,245,177,0.75);
+                position: absolute;
+                bottom: -1.1rem;
+                left: 0;
+                @include mobile-only {
+                    width: 2.2rem;
+                    height: 0.2rem;
+                    background: $color-tertiary;
+                    box-shadow: none;
+                    bottom: -0.5rem;
+                }
+            }
+        }
     }
 }
 
@@ -71,18 +102,24 @@
     box-shadow: rgba(149,157,165,0.2) 0px 8px 24px;
     display: flex;
     animation: slideup 1s forwards;
-    &__content {
-       padding: 1rem;
-       max-width: 100%;
-       overflow: hidden;
-       display: flex;
-       flex: 1;
-       justify-content: space-between;
-       gap: 1rem;
+    @include mobile-only {
+        height: 4.5rem;
+        &__content {
+            padding: 1rem;
+            max-width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            gap: 1rem;
+            @include mobile-only {
+                font-size: .9rem;
+            }
+        }
     }
 }
 
-&__text {
+.menu__item__text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -93,42 +130,26 @@
        font-weight: $weight-regular;
        overflow: hidden;
        text-overflow: ellipsis;
-        &__information {
-           font-size: 1rem;
-           font-weight: 300;
-           overflow: hidden;
-           text-overflow: ellipsis;
-        }
+       @include tablet-only {
+            font-weight: $weight-bold;
+            @include mobile-only {
+                font-size: 1rem;
+                &__information {
+                    font-size: 1rem;
+                    font-weight: 300;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    @include mobile-only {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+       }
     }
 }
 
-&__price {
+.menu__item__price {
     font-weight: $weight-bold;
     display: flex;
     align-items: flex-end;
-    &__confirmation {
-       background-color: $color-tertiary;
-       cursor: pointer;
-       height: auto;
-       width: 0;
-       opacity: 0;
-       border-radius: 0 15px 15px 0;
-       @include flexible;
-       transition: 0.4s ease-in-out;
-    }
-}
-
-.menu__item:hover .menu__item__confirmation {  //voir//
-    width: 15%;
-    transition: 0.4s ease-in;
-    opacity: 1;
-}
-
-span.check__icon {
-    color: $color-white;
-    font-size: 2.3rem;
-    &:hover  {   
-       transform: rotate(360deg);
-       transition: 0.4s ease-in-out;
-    }
 }

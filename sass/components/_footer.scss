@@ -1,4 +1,5 @@
-// INDEX FOOTER SECTION STARTS  //
+
+//  HOME PAGE & RESTAURANTS FOOTER SECTION  //
 
 footer {
     background: $color-footer;
@@ -34,7 +35,7 @@ footer {
     list-style: none;
     @include mobile-only {
         align-items: start;
-        margin: 1.5rem 0rem 0rem 0rem;
+        margin: 0rem 0rem 1rem 0;
         flex-direction: column;
         &__content {
             margin-right: 4rem;
@@ -42,6 +43,7 @@ footer {
                 margin-right: 2.2rem;
                 @include mobile-only {
                     height: 35px;
+                    padding: 1.2rem 0;
                     &__link {
                         color: $color-white;
                     }
@@ -63,4 +65,3 @@ footer {
     }
 }
 
-// FOOTER SECTION ENDS  //

@@ -1,3 +1,6 @@
+
+//  ANIMATION LOADER ENDS  //
+
 .loader {
     background: $color-white;
     opacity: 0.9;
@@ -102,12 +105,10 @@
   }
 }
 
-//  ANIMATION LOADER ENDS  //
 
 
 
-
-//  ANIMATION MENU PRESENTATION STARTS  //
+//  ANIMATION RESTAURANTS SLIDE UP APPARITION  //
 
 .menu__description article {
   animation: slideup 0.1s linear ease-in-out;
@@ -128,11 +129,9 @@
   }
 }
 
-//  ANIMATION MENU PRESENTATION ENDS  //
 
 
-
-/*=====  ANIMATION ICONS STARTS  =====*/
+/*  ANIMATION HOME PAGE ICONS */
 
 .menu__btn i {
     position: relative;
@@ -169,64 +168,73 @@
 }
 
 
-/*=====  ANIMATION ICONS ENDS  =====*/
+
+   //  ANIMATION FAVORITE ICONS RESTAURANTS   //
 
 
-
-
-
-
-  //  ANIMATION SLIDE UP STARTS  //
-
-  @keyframes slideup {
-    from {
-      transform: translatey(20px);
-      opacity: 0%;
-    }
-    to {
-      transform: translatey(0px);
-      opacity: 100%;
+.favorite__icon {
+  opacity: 0;
+  cursor: pointer;
+  @include adaptation;
+  transition: 0.7s ease-in-out;
+  grid-area: 1/2;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  &:hover {
+    background: $color-gradient;
+    @include adaptation;
+    width: 15%;
+    opacity: 1;
+    @include mobile-only {
+      width: 100%;
+      &--add {
+        opacity: 1;
+        cursor: pointer;
+        grid-area: 1/2;
+        width: 28px;
+        height: 28px;
+        min-height: auto;
+        min-width: auto;
+        display: block;
+        &:hover {
+          opacity: 0;
+        }
+      }
     }
   }
-  @keyframes fadein {
-    from {
-      opacity: 0%;
-    }
-    to {
-      opacity: 100%;
-    }
-  }
-  @keyframes fadeout {
-    from {
-      opacity: 100%;
-    }
-    to {
-      opacity: 0%;
-      visibility: hidden;
-    }
-  }
+}
  
-  //  ANIMATION SLIDE UP ENDS  //
 
-// INTEGRATION ANIMATION CSS FRENCH //
+  //  ANIMATION VALIDATION MENU STARTS  //
 
-    //  ANIMATION OPACITY loader UP STARTS  //
 
-    @keyframes fadein {
-        from {
-          opacity: 0%;
-        }
-        to {
-          opacity: 100%;
+.menu__item:hover .menu__item__confirmation {  
+  width: 15%;
+  transition: 0.4s ease-in;
+  opacity: 1;
+  @include mobile-only {
+    width: 20%;
+    & {
+      background-color: $color-tertiary;
+      cursor: pointer;
+      height: auto;
+      width: 0;
+      opacity: 0;
+      border-radius: 0 15px 15px 0;
+      @include flexible;
+      transition: 0.4s ease-in-out;
+      span.check__icon {
+        color: $color-white;
+        font-size: 2.3rem;
+        @include mobile-only {
+          font-size: 1.9rem;
+          &:hover  {   
+            transform: rotate(360deg);
+            transition: 0.4s ease-in-out;
+          }
         }
       }
-      @keyframes fadeout {
-        from {
-          opacity: 100%;
-        }
-        to {
-          opacity: 0%;
-          visibility: hidden;
-        }
-      }
-  //  ANIMATION OPACITY SPINNER UP ENDS  //
+    }
+  }
+}

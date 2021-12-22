@@ -1,7 +1,9 @@
                  
                  /*******BASE PROPERTIES FONT*******/
 
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,11 +32,17 @@ header {
     background: #fff;
     cursor: pointer;
 }
+/* @media (prefers-color-scheme: dark) {
+    .header {
+        background: #686868;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    }
+} */
 
 .header__logo {
     height: 30px;
     width: 173px;
-}
+} /* SCSS OK */
 
 /******  HEADER SECTION ENDS *****/
 
@@ -56,13 +64,21 @@ main {
     gap: 0.5rem;
     border-bottom: 2px solid #f7f7f7;
     border-top: 3px inset hsl(180deg 0% 100% / 16%);
-}
+} /* SCSS OK */
+/* @media (prefers-color-scheme: dark) {
+    .location {
+        color: #f1f1f1;
+        background: #414343;
+        border-top: none;
+        border-bottom: 2px solid #5c5c5c;
+    }
+} */
 
 .location__text {
     font-size: 1.2em;
     font-weight: 700;
     margin-right: 0.7rem;
-}
+} /* SCSS OK */
 
 
 /******  SECTION LOCATION ENDS *****/
@@ -182,16 +198,7 @@ main {
     }
   }
   
-/* @keyframes loader {
-    0% {
-        opacity: 1;
-    } 
-    100% {
-        opacity: 0;
-        transform: scale(-1);
-    }
-} */
-
+  /* SCSS OK */
   
 /***  ANIMATION LOADER ENDS  ***/
  
@@ -210,13 +217,18 @@ main {
 
 .hero--position {
     padding: 5rem 2rem;
-    background-image: linear-gradient(270deg, #f5f7fa 0%, #e1fff3 100%);
+    background-image: linear-gradient(270deg, #d3d3d4 0%, #e1fff3 100%);
     background-position: center;
     background-size: cover;
-
 }
+/* @media (prefers-color-scheme: dark) {
+    .hero--position {
+        background: linear-gradient(to right, #434341, #364156);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    }
+} */
 
-.hero__btn {
+.order__btn {
     color: #fff;
     padding: 1.3rem 3.2rem;
     text-align: center;
@@ -230,7 +242,7 @@ main {
     transition: 0.2s ease-in-out;
 }
 
-.hero__btn:hover {
+.order__btn:hover {
     filter: brightness(105%);
     box-shadow: 5px 8px 30px 0px rgba(125,124,124,0.75);
 }
@@ -253,6 +265,11 @@ main {
 .operation {
     padding: 6rem 2rem;
 }
+/* @media (prefers-color-scheme: dark) {
+    .operation {
+        background: #434341;
+    }
+} */
 
 .operation__title {
     margin: 0 0 5rem 4.5rem;
@@ -289,6 +306,12 @@ main {
     align-items: center;
     gap: 2rem;
 }
+/* @media (prefers-color-scheme: dark) {
+    .order__card {
+        background: #364156;
+        box-shadow: -1px 8px 38px 1px rgba(125,124,124,0.75);
+    }
+} */
 
 .order__card:hover {
     background: #ebdefa;
@@ -325,6 +348,12 @@ main {
 
 /*****  HOME SECTION STARTS  *****/
 
+/* @media (prefers-color-scheme: dark) {
+    .home {
+        background: #434341;
+    }                                      
+} */
+
 .home__container {
     display: flex;
     flex-wrap: wrap;
@@ -341,11 +370,22 @@ main {
     position: relative;
     box-shadow: 0px 31px 40px -8px rgb(218,218,218,0.75);
 }
+/* @media (prefers-color-scheme: dark) {
+    .home__cards {
+        background: #364156;
+        box-shadow: -1px 8px 38px 1px rgba(125,124,124,0.75);
+    }
+} */
 
 .home__cards:hover {
     filter: brightness(110%);
     box-shadow: -1px 8px 38px 1px rgba(125,124,124,0.75);
 }
+/* @media (prefers-color-scheme: dark) {
+    .home__cards:hover {
+        box-shadow: 0px 31px 40px -8px rgb(218,218,218,0.75);
+    }
+} */
 
 .card__badge {
     position: absolute;
@@ -401,35 +441,39 @@ main {
 }
 
 
+/* ! MODIFICATIONS LE 20/12: ATTENTE FINALISATION ANIMATION ICONS + SCSS */
+
 /***  ANIMATION ICONS STARTS  ***/
-/* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
 
-.menu__btn i {
+.menu__btn {
     position: relative;
-    left: 405px;
+    left: 85%;
     top: -65px;
-    color: black;
     display: block;
-    font-size: 25px; 
+    width: 0;
 }
 
-.menu__btn i:hover {
+.menu__btn:hover .fas.fa-heart {
     opacity: 1;
-    color: #ff79da; 
-    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%); 
+    
 }
 
-.card__icon {
+.menu__btn:hover .far.fa-heart {
+    display: none;
+    /* background-image: linear-gradient(to top left, #9356dc, #ff79da); */
+}
+
+/* .card__icon {
     width: 15%;
     height: 0;
-    /* COEUR PLEIN */
-}
+    /* COEUR PLEIN 
+} */
 
 
 .card__icon:hover {
     bottom: 0;
     transition: all 0.4s linear 0s;
-    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
+    background-image: linear-gradient(to top left, #9356dc, #ff79da);
 }
 
  
@@ -438,23 +482,22 @@ main {
     color: #000;
 }*/
 
-/* .far.fa-heart:hover {
+.far.fa-heart {
     opacity: 1;
-    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
-} */
+   color: #000;
+}
 
 .fas.fa-heart {
     opacity: 0;
-    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
+    background: linear-gradient(to top left, #9356dc, #ff79da);
+
 }
 
-.fas.fa-heart:hover {
-    background: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
-}
 
-/* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
+
+
    /***  ANIMATION ICONS ENDS  ***/
-
+/* ! MODIFICATIONS LE 20/12: ATTENTE FINALISATION ANIMATION ICONS + SCSS */
 
 /*****  HOME SECTION ENDS  *****/
 
@@ -535,14 +578,14 @@ footer {
     } /* SCSS OK */
 
 
-    /* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
+/* ! MODIFICATIONS LE 20/12: ATTENTE FINALISATION ANIMATION ICONS + SCSS */
 
     .menu__btn i {
         left: 400px;
         font-size: 26px;
     }
 
-    /* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
+ /* ! MODIFICATIONS LE 20/12: ATTENTE FINALISATION ANIMATION ICONS + SCSS */
 
 
     .footer__content {
@@ -585,7 +628,7 @@ footer {
         font-size: 1rem;
     } /* SCSS OK */
 
-    .hero__btn {
+    .order__btn {
         padding: 1.1rem 2rem;
         font-size: 1rem;
     } /* SCSS OK */
@@ -679,20 +722,21 @@ footer {
     } /* SCSS OK */
 
 
-    /* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
+    /* ! MODIFICATIONS LE 20/12: ATTENTE FINALISATION ANIMATION ICONS + SCSS */
 
     .menu__btn {
         height: 0;
+        width: 0;
+        position: absolute;
+        left: 90%;
+        top: 210px;
     }
 
     .menu__btn i {
-        top: -50px;
         font-size: 24px;
-        right: 0;
-        left: 88%;
     }
    
-  /* ! MODIFICATIONS LE 19/12: ATTENTE AJOUT ANIMATION ICONS DANS SCSS */
+ /* ! MODIFICATIONS LE 20/12: ATTENTE FINALISATION ANIMATION ICONS + SCSS */
     
     
     footer {
@@ -726,3 +770,16 @@ footer {
 }
 
 /**------  MEDIA QUERIES HOME PAGE SMALL-SCREEN ENDS  ------**/
+/* ! MODIFICATIONS GUILLAUME 20/12 ANIMATION BTN A ADAPTER */
+/* .link a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+  } */
+  

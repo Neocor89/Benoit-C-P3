@@ -34,6 +34,17 @@
     font-size: $size;   
 }
 
+// Mixin Color // 
+@mixin gradient($gradient: $color-gradient) {
+    background: linear-gradient(56deg, rgba(147,86,220,1) 10%, rgba(255,121,218,1) 100%)($color-gradient);
+}
+
+// Mixin Adaptation //
+@mixin adaptation {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 // Mixin Media-query//
 @mixin mobile-only {

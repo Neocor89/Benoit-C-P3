@@ -3,7 +3,6 @@ header {
   font-size: 2.5rem;
   z-index: 2;
   height: 4.3rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   top: 0;
   display: flex;
   justify-content: center;
@@ -12,9 +11,35 @@ header {
   background: #fff;
   cursor: pointer;
 }
-header .__logo {
+header .header__logo {
   height: 30px;
   width: 173px;
+}
+
+.material-icons {
+  font-size: 28px;
+}
+
+.header {
+  font-family: "Shrikhand";
+  font-size: 2.5rem;
+  z-index: 2;
+  height: 4.3rem;
+  top: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  background: #fff;
+  cursor: pointer;
+}
+.header__logo {
+  height: 30px;
+  width: 173px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .arrow__icon {
@@ -22,11 +47,15 @@ header .__logo {
   cursor: pointer;
   left: 20px;
   top: 22px;
-}
-
-span.material-icons {
-  font-size: 27px;
   color: #000;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 768px) {
+  .arrow__icon {
+    left: 9px;
+    font-size: 1.5rem;
+  }
 }
 
 main {
@@ -187,7 +216,6 @@ main {
   color: #5f5f5f;
 }
 
-/*****  HERO SECTION INDEX STARTS *****/
 .hero {
   display: flex;
   justify-content: center;
@@ -213,27 +241,25 @@ main {
   }
 }
 
-.__title {
+.hero__title {
   font-size: 2.1rem;
   padding: 2rem;
 }
 @media screen and (max-width: 768px) {
-  .__title {
+  .hero__title {
     font-size: 1.6rem;
     padding-bottom: 1.1rem;
   }
-  .__title__byline {
+  .hero__title__byline {
     font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
-  .__title__byline {
+  .hero__title__byline {
     font-size: 1rem;
   }
 }
 
-/*****  HERO SECTION INDEX ENDS *****/
-/*****  HERO SECTION A LA FRANCAISE STARTS *****/
 .hero__img {
   object-fit: cover;
   background-size: cover;
@@ -241,13 +267,17 @@ main {
   max-height: 30rem;
   background-position: center;
 }
+@media screen and (max-width: 768px) {
+  .hero__img {
+    max-height: 25rem;
+  }
+}
 
-/*****  HERO SECTION A LA FRANCAISE ENDS *****/
 @media screen and (max-width: 768px) {
   .home {
     padding-top: 3.5rem;
   }
-  .home .home__title {
+  .home__title {
     position: relative;
     display: flex;
     justify-content: center;
@@ -255,13 +285,13 @@ main {
   }
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
-  .home .home__title {
+  .home__title {
     justify-content: start;
     background: #f2f2f2;
     padding: 2rem 0rem 1.5rem 1.2rem;
     margin: 0;
   }
-  .home .home__title::after {
+  .home__title::after {
     content: "";
     width: 8.6rem;
     height: 0.3rem;
@@ -273,7 +303,7 @@ main {
   }
 }
 @media screen and (max-width: 768px) and (max-width: 768px) and (max-width: 768px) {
-  .home .home__title::after {
+  .home__title::after {
     display: none;
   }
 }
@@ -410,7 +440,7 @@ footer {
 @media screen and (max-width: 768px) {
   .footer__list {
     align-items: start;
-    margin: 1.5rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 1rem 0;
     flex-direction: column;
   }
   .footer__list__content {
@@ -425,6 +455,7 @@ footer {
 @media screen and (max-width: 768px) and (max-width: 992px) and (max-width: 768px) {
   .footer__list__content {
     height: 35px;
+    padding: 1.2rem 0;
   }
   .footer__list__content__link {
     color: #fff;
