@@ -104,7 +104,7 @@ a {
 } /* SCSS OK */
                                                                                         /* ! */
 .favorite__icon:hover {
-    background: linear-gradient(56deg, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(2deg, #ff79da 0%, #9356dc 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

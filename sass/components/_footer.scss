@@ -1,67 +1,64 @@
-
 //  HOME PAGE & RESTAURANTS FOOTER SECTION  //
 
 footer {
-    background: $color-footer;
-    @include flexible;
-    @include mobile-only {
-        justify-content: start;
-        &__container {
-            padding: 2rem;
-            @include mobile-only {
-                display: flex;
-                flex-direction: column;
-                padding-left: 1rem;
-                .footer__logo {
-                    font-size: $font-size-repeat;
-                    color: $color-white;
-                    font-family : $font-logo;
-                    display: flex;
-                    margin: 0rem 0 2rem 0;
-                    justify-content: start;
-                    @include mobile-only {
-                        margin: 0;
-                    }
-                }
-            }
-        }
-    }
-    
+	background: $color-footer;
+	@include flexible;
+	@include mobile-only {
+		justify-content: start;
+		&__container {
+			padding: 2rem;
+			@include mobile-only {
+				display: flex;
+				flex-direction: column;
+				padding-left: 1rem;
+				.footer__logo {
+					font-size: $font-size-repeat;
+					color: $color-white;
+					font-family: $font-logo;
+					display: flex;
+					margin: 0rem 0 2rem 0;
+					justify-content: start;
+					@include mobile-only {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
 }
 
 .footer__list {
-    @include flexible;
-    margin: 1rem 0;
-    list-style: none;
-    @include mobile-only {
-        align-items: start;
-        margin: 0rem 0rem 1rem 0;
-        flex-direction: column;
-        &__content {
-            margin-right: 4rem;
-            @include tablet-only {
-                margin-right: 2.2rem;
-                @include mobile-only {
-                    height: 35px;
-                    padding: 1.2rem 0;
-                    &__link {
-                        color: $color-white;
-                    }
-                }
-            }
-        }
-    }
+	@include flexible;
+	margin: 1rem 0;
+	list-style: none;
+	@include mobile-only {
+		align-items: start;
+		margin: 0rem 0rem 1rem 0;
+		flex-direction: column;
+		&__content {
+			margin-right: 4rem;
+			@include tablet-only {
+				margin-right: 2.2rem;
+				@include mobile-only {
+					height: 35px;
+					padding: 1.2rem 0;
+					&__link {
+						color: $color-white;
+					}
+				}
+			}
+		}
+	}
 }
 
 .footer__icon {
-    margin-right: 10px;
-    .fas.fa-utensils {
-        @include mobile-only {
-            margin-right: 17px;
-            .fas.fa-hands-helping {
-                transform: rotate(-13deg);
-            }
-        }
-    }
+	margin-right: 10px;
+	.fas.fa-utensils {
+		@include mobile-only {
+			margin-right: 17px;
+			.fas.fa-hands-helping {
+				transform: rotate(-13deg);
+			}
+		}
+	}
 }
-

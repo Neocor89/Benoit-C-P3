@@ -1,24 +1,22 @@
 main {
-    position: relative;
+	position: relative;
 }
 
 .location {
-    background: $color-background;
-    font-weight: 500;
-    padding: 1.3rem;
-    @include flexible;
-    gap: 0.5rem;
-    border-bottom: 2px solid $variant-bg;
-    border-top: 3px inset hsl(180deg 0% 100% / 16%);
-    &__text {
-        font-size: $font-size-repeat;
-        font-weight: $weight-bold;
-        margin-right: 0.7rem;
-        @include mobile-only {
-            font-size: 1.1em;
-            font-weight: 500;
-        }
-    }
-    
-
+	background: $color-background;
+	font-weight: 500;
+	padding: 1.3rem;
+	@include flexible;
+	gap: 0.5rem;
+	border-bottom: 2px solid $variant-bg;
+	border-top: 3px inset hsl(180deg 0% 100% / 16%);
+	&__text {
+		font-size: $font-size-repeat;
+		font-weight: $weight-bold;
+		margin-right: 0.7rem;
+		@include mobile-only {
+			font-size: 1.1em;
+			font-weight: 500;
+		}
+	}
 }
