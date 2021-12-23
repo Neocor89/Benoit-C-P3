@@ -441,9 +441,54 @@ main {
 }
 
 
-/* ! MODIFICATIONS LE 20/12: ATTENTE FINALISATION ANIMATION ICONS + SCSS */
-
 /***  ANIMATION ICONS STARTS  ***/
+
+
+.heart-shape{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* width: 120px; 
+    height: 120px;  */
+    width: 20px;
+    height: 20px;
+    -webkit-transform: rotate(45deg); 
+    -moz-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    -o-transform: rotate(45deg); 
+    transform: scale(45deg); 
+    background: #ff79da;
+} 
+
+.heart-shape::after, .heart-shape::before {
+    position: absolute; 
+    width: 20px;
+    height: 20px;
+    /* width: 120px; 
+    height: 120px;  */
+    content: ''; 
+    -webkit-border-radius: 50%; 
+    -moz-border-radius: 50%; 
+    -o-border-radius: 50%; 
+    border-radius: 50%; 
+    background: #ff79da;
+    
+} 
+
+.heart-shape::after {
+    bottom: 0px; 
+    /* left: -65px;  */
+    left: -10px;
+   
+} 
+
+.heart-shape::before {
+    /* top: -65px;  */
+    top: -10px;
+    right: 0px; 
+    background: linear-gradient(198deg, #9356dc 1%, #ff79da 63%);
+} 
+
 
 .menu__btn {
     position: relative;
@@ -451,7 +496,7 @@ main {
     top: -65px;
     display: block;
     width: 0;
-}
+} */
 
 .menu__btn:hover .fas.fa-heart {
     opacity: 1;
@@ -460,8 +505,10 @@ main {
 
 .menu__btn:hover .far.fa-heart {
     display: none;
-    /* background-image: linear-gradient(to top left, #9356dc, #ff79da); */
 }
+    /* background-image: linear-gradient(to top left, #9356dc, #ff79da); 
+
+
 
 /* .card__icon {
     width: 15%;
@@ -477,15 +524,15 @@ main {
 }
 
  
-/* .far.fa-heart {
-    opacity: 1;
-    color: #000;
-}*/
-
 .far.fa-heart {
     opacity: 1;
-   color: #000;
+    color: #000;
 }
+
+ /* .far.fa-heart {
+    opacity: 1;
+   color: #000;
+} */
 
 .fas.fa-heart {
     opacity: 0;
@@ -495,9 +542,8 @@ main {
 
 
 
-
    /***  ANIMATION ICONS ENDS  ***/
-/* ! MODIFICATIONS LE 20/12: ATTENTE FINALISATION ANIMATION ICONS + SCSS */
+
 
 /*****  HOME SECTION ENDS  *****/
 

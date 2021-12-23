@@ -405,17 +405,18 @@ footer {
   footer {
     justify-content: start;
   }
-  footer__container {
-    padding: 2rem;
-  }
 }
-@media screen and (max-width: 768px) and (max-width: 768px) {
-  footer__container {
+
+.footer__container {
+  padding: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .footer__container {
     display: flex;
     flex-direction: column;
     padding-left: 1rem;
   }
-  footer__container .footer__logo {
+  .footer__container__logo {
     font-size: 1.2rem;
     color: #fff;
     font-family: "Shrikhand";
@@ -424,8 +425,8 @@ footer {
     justify-content: start;
   }
 }
-@media screen and (max-width: 768px) and (max-width: 768px) and (max-width: 768px) {
-  footer__container .footer__logo {
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .footer__container__logo {
     margin: 0;
   }
 }

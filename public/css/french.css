@@ -102,7 +102,7 @@ a {
     width: 28px;
     height: 28px;
 } /* SCSS OK */
-                                                                                        /* ! */
+                                                                                        
 .favorite__icon:hover {
     background: linear-gradient(2deg, #ff79da 0%, #9356dc 100%);
     -webkit-background-clip: text;
