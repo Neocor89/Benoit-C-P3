@@ -1,12 +1,17 @@
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/maps";
-@import "./utils/lists";
+@import "./utils/animations";
 
+@import "./base/base";
+@import "./base/typography";
 @import "./components/header";
-@import "./components/location";
-@import "./components/operation";
+@import "./components/buttons";
 @import "./components/hero";
 @import "./components/home";
+@import "./components/location";
+@import "./components/operation";
+@import "./components/menu";
 @import "./components/footer";
+
 

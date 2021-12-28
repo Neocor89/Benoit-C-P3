@@ -13,7 +13,7 @@
     animation: loader 4s linear forwards;
 }
  
-    &__itemContainer {
+    .loader__itemContainer {
         @include flexible;
         &__container{
             -webkit-animation:animball_two 1s infinite linear;
@@ -37,7 +37,7 @@
     position:absolute;
 } 
     
-&_1 {
+.ball_1 {
     border: 5px solid #ff79da;
     top: 0;
     left: 12px; 
@@ -48,7 +48,7 @@
     }
 }
     
-&_3 {
+.ball_3 {
     border: 5px solid #9356dc;
     top: 12px;
     left: 0;
@@ -133,39 +133,42 @@
 
 /*  ANIMATION HOME PAGE ICONS */
 
-.menu__btn i {
-    position: relative;
-    left: 405px;
-    top: -65px;
-    color: black;
-    display: block;
-    font-size: 25px;
+.menu__btn {
+  position: relative;
+  left: 85%;
+  top: -65px;
+  display: block;
+  width: 0;
+  font-size: 0.8rem;
+} 
+
+.far {
+  opacity: 1;
+  color: #000;
 }
 
-.card__like {
-    width: 15%;
-    height: 0;
+.far:hover {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.fas {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.fas:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(to top left, #9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(1.1);
 }
 
 
-.card__like:hover {
-    left: 405px;
-    bottom: 0;
-   height: 100%;
-   background: #fff;
-   transition: all 0.4s linear 0s;
-
-}
-
-.fas.fa-heart {
-    opacity: 0;
-}
-
-.fas.fa-heart:hover {
-    opacity: 1;
-    color: #ff79da;
-    background-color: linear-gradient(162deg, #ff79da 50%, #9356dc 100%);
-}
 
 
 
