@@ -1,13 +1,5 @@
 //  HOME PAGE & RESTAURANTS ORDER BUTTON  //
 
-.material-icons {
-	font-size: 28px;
-	@include mobile-only {
-		left: 9px;
-		font-size: 1.5rem;
-	}
-}
-
 .order__action {
 	@include flexible;
 }
@@ -31,6 +23,19 @@
 	}
 	&:hover {
 		@include cards-effect;
+	}
+}
+
+.order__btn-home {
+	@include xsscreen-only {
+		padding: 1.1rem 2rem;
+	}
+}
+
+.material-icons {
+	font-size: 28px;
+	@include mobile-only {
+		font-size: 1.5rem;
 	}
 }
 

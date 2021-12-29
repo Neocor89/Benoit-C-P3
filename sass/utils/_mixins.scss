@@ -43,9 +43,9 @@
 
 // Mixin Color //
 
-@mixin gradient($gradient: $color-gradient) {
-    background: linear-gradient(56deg, rgba(147,86,220,1) 10%, rgba(255,121,218,1) 100%)($color-gradient);
-}
+// @mixin gradient($gradient: $color-gradient) {
+//     background: linear-gradient(56deg, rgba(147,86,220,1) 10%, rgba(255,121,218,1) 100%)($color-gradient);
+// }
 
 
 
@@ -55,6 +55,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
 }
 
 

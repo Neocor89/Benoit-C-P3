@@ -17,7 +17,7 @@
 .menu__header {
 	margin-top: $col-gap;
 	margin-bottom: 3rem;
-	gap: 1rem;
+	gap: 2.5rem;
 	display: grid;
 	grid-template-columns: $auto-grid $auto-grid;
 	align-items: $flex-position;
@@ -37,6 +37,7 @@
 			text-align: start;
 			margin-left: 0;
 			padding-right: 2.5rem;
+			padding-bottom: 0.5rem;
 		}
 	}
 }
@@ -135,12 +136,9 @@
 	white-space: nowrap;
 	.menu__item__title {
 		font-size: 1.1rem;
-		font-weight: $weight-regular;
+		font-weight: $weight-bold;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		@include tablet-only {
-			font-weight: $weight-bold;
-		}
 		@include mobile-only {
 			font-size: 1rem;
 		}
