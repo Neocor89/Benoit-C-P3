@@ -100,8 +100,8 @@ main {
     align-items: center;
     animation: loader 4s steps(1) forwards;
 }
- 
-.loader__itemContainer {
+
+.loader__item__container {
     display: flex;
     justify-content: center;
 }

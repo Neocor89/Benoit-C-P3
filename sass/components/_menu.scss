@@ -1,4 +1,4 @@
-
+/**  SECTION MENU STARTS  **/
 
 
 .menu__container {
@@ -26,40 +26,44 @@
 		margin-bottom: 2rem;
 		display: grid;
 		place-content: space-between;
-		&__title {
-			font-family: $font-logo;
-			font-size: 2.2rem;
-			font-style: italic;
-			text-align: end;
-			@include mobile-only {
-				font-size: 1.5rem;
-				text-align: start;
-				margin-left: 0;
-				padding-right: 2.5rem;
-			}
+	}
+	.menu__title {
+		font-family: $font-logo;
+		font-size: 2.2rem;
+		font-style: italic;
+		text-align: end;
+		@include mobile-only {
+			font-size: 1.5rem;
+			text-align: start;
+			margin-left: 0;
+			padding-right: 2.5rem;
 		}
 	}
 }
 
-/** SECTION MENU ("MENU-CONTAINER END") **/
 
-/** SECTION MENU ("MENU-PRESENTATION STARTS")  **/
+
+
+
+/**  SECTION MENU-PRESENTATION STARTS  **/
+
 
 .menus__presentation {
 	@include grid-position;
 	gap: $col-gap;
 	@include tablet-only {
 		grid-template-columns: repeat(1, minmax(0, $grid-size));
-		&__description {
-			display: flex;
-			flex-direction: column;
-			gap: $col-gap;
-			@include mobile-only {
-				gap: 1rem;
-			}
+	}
+	.menu__description {
+		display: flex;
+		flex-direction: column;
+		gap: $col-gap;
+		@include mobile-only {
+			gap: 1rem;
 		}
 	}
 }
+
 
 .menu__description__title {
 	font-size: 1.5rem;
@@ -69,31 +73,31 @@
 	position: relative;
 	@include tablet-only {
 		font-size: $font-size-repeat;
+	}
+	@include mobile-only {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
+	&::after {
+		content: "";
+		width: 4.2rem;
+		height: 0.3rem;
+		background: linear-gradient(
+		90deg,
+		rgba(153, 226, 208, 1) 49%,
+		rgba(147, 86, 220, 1) 72%,
+		rgba(255, 121, 218, 1) 100%
+		);
+		box-shadow: 0px 2px 5px 0px rgba(104, 245, 177, 0.75);
+		position: absolute;
+		bottom: -1.1rem;
+		left: 0;
 		@include mobile-only {
-			font-size: 1rem;
-			margin-bottom: 0.5rem;
-			&::after {
-				content: "";
-				width: 4.2rem;
-				height: 0.3rem;
-				background: linear-gradient(
-					90deg,
-					rgba(153, 226, 208, 1) 49%,
-					rgba(147, 86, 220, 1) 72%,
-					rgba(255, 121, 218, 1) 100%
-				);
-				box-shadow: 0px 2px 5px 0px rgba(104, 245, 177, 0.75);
-				position: absolute;
-				bottom: -1.1rem;
-				left: 0;
-				@include mobile-only {
-					width: 2.2rem;
-					height: 0.2rem;
-					background: $color-tertiary;
-					box-shadow: none;
-					bottom: -0.5rem;
-				}
-			}
+			width: 2.2rem;
+			height: 0.2rem;
+			background: $color-tertiary;
+			box-shadow: none;
+			bottom: -0.5rem;
 		}
 	}
 }
@@ -107,20 +111,21 @@
 	animation: slideup 1s forwards;
 	@include mobile-only {
 		height: 4.5rem;
-		&__content {
-			padding: 1rem;
-			max-width: 100%;
-			overflow: hidden;
-			display: flex;
-			flex: 1;
-			justify-content: space-between;
-			gap: 1rem;
-			@include mobile-only {
-				font-size: .9rem;
-			}
+	}
+	.menu__item__content {
+		padding: 1rem;
+		max-width: 100%;
+		overflow: hidden;
+		display: flex;
+		flex: 1;
+		justify-content: space-between;
+		gap: 1rem;
+		@include mobile-only {
+			font-size: .9rem;
 		}
 	}
 }
+
 
 .menu__item__text {
 	display: flex;
@@ -128,28 +133,29 @@
 	justify-content: space-between;
 	overflow: hidden;
 	white-space: nowrap;
-	&__title {
+	.menu__item__title {
 		font-size: 1.1rem;
 		font-weight: $weight-regular;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		@include tablet-only {
 			font-weight: $weight-bold;
+		}
+		@include mobile-only {
+			font-size: 1rem;
+		}
+		.menu__item__information {
+			font-size: 1rem;
+			font-weight: 300;
+			overflow: hidden;
+			text-overflow: ellipsis;
 			@include mobile-only {
-				font-size: 1rem;
-				&__information {
-					font-size: 1rem;
-					font-weight: 300;
-					overflow: hidden;
-					text-overflow: ellipsis;
-					@include mobile-only {
-						font-size: 0.9rem;
-					}
-				}
+				font-size: 0.9rem;
 			}
 		}
 	}
 }
+
 
 .menu__item__price {
 	font-weight: $weight-bold;

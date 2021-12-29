@@ -1,4 +1,5 @@
 
+
 //  Mixin Positioning  //
 
 @mixin flexible($position: $flex-position) {
@@ -22,31 +23,44 @@
 }
 
 
+
 //  Mixin Hover Effects  //
+
 @mixin cards-effect($bright: $bright-hover) {
     filter: brightness($bright);
     box-shadow: -1px 8px 38px 1px rgba(125,124,124,0.75);  
 }
 
 
+
 // Mixin Font//
+
 @mixin text-size($size: $font-size-repeat) {
     font-size: $size;   
 }
 
-// Mixin Color // 
+
+
+// Mixin Color //
+
 @mixin gradient($gradient: $color-gradient) {
     background: linear-gradient(56deg, rgba(147,86,220,1) 10%, rgba(255,121,218,1) 100%)($color-gradient);
 }
 
+
+
 // Mixin Adaptation //
+
 @mixin adaptation {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+
+
 // Mixin Media-query//
+
 @mixin mobile-only {
     @media screen and (max-width: map-get($breakpoints, mobile)) {
         @content;        
@@ -55,6 +69,12 @@
 
 @mixin tablet-only {
     @media screen and (max-width: map-get($breakpoints, tablet)) {
+        @content;        
+    }
+}
+
+@mixin xsscreen-only {
+    @media screen and (max-width: map-get($breakpoints, xsscreen)) {
         @content;        
     }
 }

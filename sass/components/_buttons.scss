@@ -14,7 +14,7 @@
 
 .order__btn {
 	color: $color-white;
-	padding: 1.3rem 3.2rem;
+	padding: 1.3rem 4.5rem;
 	text-align: $flex-position;
 	background: $color-gradient;
 	width: min-content;
@@ -26,10 +26,11 @@
 	transition: 0.2s ease-in-out;
 	font-size: $font-size-repeat;
 	@include mobile-only {
-		padding: 1.1rem 2rem;
+		padding: 1.1rem 3.5rem;
 		font-size: 1rem;
-		&:hover {
-			@include cards-effect;
-		}
+	}
+	&:hover {
+		@include cards-effect;
 	}
 }
+

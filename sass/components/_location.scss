@@ -3,14 +3,14 @@ main {
 }
 
 .location {
-	background: $color-background;
+	background: $color-adjust;
 	font-weight: 500;
 	padding: 1.3rem;
 	@include flexible;
 	gap: 0.5rem;
 	border-bottom: 2px solid $variant-bg;
 	border-top: 3px inset hsl(180deg 0% 100% / 16%);
-	&__text {
+	.location__text {
 		font-size: $font-size-repeat;
 		font-weight: $weight-bold;
 		margin-right: 0.7rem;

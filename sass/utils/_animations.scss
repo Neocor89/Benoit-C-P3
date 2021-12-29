@@ -12,18 +12,22 @@
     @include flexible;
     animation: loader 4s linear forwards;
 }
+
+
+
+//  INTEGRATION ANIMATION MULTI-Browser  //
  
-    .loader__itemContainer {
-        @include flexible;
-        &__container{
-            -webkit-animation:animball_two 1s infinite linear;
-            -moz-animation:animball_two 1s infinite linear;
-            -ms-animation:animball_two 1s infinite linear;
-            animation:animball_two 1s infinite linear;
-            animation-fill-mode: forwards;
-            animation-iteration-count: 4;
-            width:184px;
-            height:184px;
+.loader__item__container {
+    @include flexible;
+    .loader__container{
+        -webkit-animation:animball_two 1s infinite linear;
+        -moz-animation:animball_two 1s infinite linear;
+        -ms-animation:animball_two 1s infinite linear;
+        animation:animball_two 1s infinite linear;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 4;
+        width:184px;
+        height:184px;
     }
 }
 
@@ -32,7 +36,6 @@
     height:184px;
     border-radius:50%;
 } 
-
 .ball_1, .ball_2, .ball_3, .ball_4  {
     position:absolute;
 } 
@@ -40,24 +43,24 @@
 .ball_1 {
     border: 5px solid #ff79da;
     top: 0;
-    left: 12px; 
-    &_2 {
-        border: 5px solid #99E2D0;
-        top: 0;
-        left: -17px;
-    }
+    left: 12px;
 }
-    
+.ball_2 {
+    border: 5px solid #99E2D0;
+    top: 0;
+    left: -17px;
+}
 .ball_3 {
     border: 5px solid #9356dc;
     top: 12px;
     left: 0;
-    &_4 {
-        border: 5px solid #9356DC;
-        top: -12px;
-        left: 0;
-    }
-} 
+}
+.ball_4 {
+  border: 5px solid #9356DC;
+  top: -12px;
+  left: 0;
+}
+
     
 @-webkit-keyframes animball_two {
   0% {
@@ -136,40 +139,37 @@
 .menu__btn {
   position: relative;
   left: 85%;
-  top: -65px;
+  top: -55px;
   display: block;
   width: 0;
   font-size: 0.8rem;
 } 
 
-.far {
+.far.fa-heart {
   opacity: 1;
   color: #000;
 }
 
-.far:hover {
+.far.fa-heart:hover {
   opacity: 0;
-  transform: scale(0.5);
+  transform: scale(0);
 }
 
-.fas {
+.fas.fa-heart {
   opacity: 0;
   position: absolute;
   top: 0;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
-.fas:hover {
+.fas.fa-heart:hover {
   opacity: 1;
   color: transparent;
-  background-image: linear-gradient(to top left, #9356dc, #ff79da);
+  background-image: linear-gradient(359deg,#ff79da 0%, #9356dc 80%);
   background-clip: text;
   -webkit-background-clip: text;
   transform: scale(1.1);
 }
-
-
-
 
 
    //  ANIMATION FAVORITE ICONS RESTAURANTS   //
