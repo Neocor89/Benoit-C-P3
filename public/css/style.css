@@ -369,7 +369,7 @@ a {
 }
 .hero--position {
   padding: 5rem 2rem;
-  background-image: linear-gradient(270deg, #f5f7fa 0%, #e1fff3 100%);
+  background-image: repeating-linear-gradient(105deg, transparent 0px, transparent 3px, white 3px, white 28px), repeating-linear-gradient(333deg, transparent 0px, transparent 3px, white 3px, white 28px), linear-gradient(90deg, #ff79da, #ec7485, #99e2d0, #a7ec74, #74eca7, #9356dc, #8574ec);
   background-position: center;
   background-size: cover;
 }
