@@ -109,7 +109,6 @@
 	border-radius: 15px;
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 	display: flex;
-	animation: slideup 1s forwards;
 	@include mobile-only {
 		height: 4.5rem;
 	}

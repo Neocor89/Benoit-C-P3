@@ -103,21 +103,53 @@
     visibility: hidden;
   }
 }
-.menu__description article {
-  animation: slideup 0.9s ease-in-out;
+.menu__item {
+  animation: slideup 1s forwards;
+}
+
+.menu__item:nth-child(2) {
+  animation-delay: 300ms;
+}
+
+.menu__item:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+.menu__item:nth-child(4) {
+  animation-delay: 500ms;
+}
+
+.menu__item:nth-child(5) {
+  animation-delay: 600ms;
+}
+
+.menu__item:nth-child(6) {
+  animation-delay: 700ms;
+}
+
+.menu__item:nth-child(7) {
+  animation-delay: 900ms;
+}
+
+.menu__item:nth-child(8) {
+  animation-delay: 1000ms;
+}
+
+.menu__item:nth-child(9) {
+  animation-delay: 900ms;
 }
 
 @keyframes slideup {
   0% {
-    transform: translatey(-170px);
-    opacity: 0;
+    transform: translatey(-120px);
+    opacity: 0%;
   }
   50% {
-    opacity: 0.5;
+    opacity: 50%;
   }
   100% {
     transform: translatey(0px);
-    opacity: 1;
+    opacity: 100%;
   }
 }
 /*  ANIMATION HOME PAGE ICONS */
@@ -228,16 +260,12 @@
 span.check__icon {
   color: #fff;
   font-size: 2.3rem;
+  transform: rotate(0deg);
 }
 @media screen and (max-width: 768px) {
   span.check__icon {
     font-size: 1.9rem;
   }
-}
-
-.check__icon:hover {
-  transform: rotate(360deg);
-  transition: 0.4s ease-in-out;
 }
 
 *,
@@ -248,13 +276,6 @@ span.check__icon {
   box-sizing: border-box;
 }
 
-/*************
-EXEMPLE D'INFO LIGNE SASS DU PACKAGE JSON  
- "sass": "sass --watch ./sass/main.scss:./public/css/style.css --style expanded --no-source-map"
- ****************************************************************************
- OU
-  "sass": "sass --watch ./sass/styles.scss:./public/css/style.css --style expanded (--no-source-map)"
- **************/
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -845,7 +866,6 @@ main {
   border-radius: 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
-  animation: slideup 1s forwards;
 }
 @media screen and (max-width: 768px) {
   .menu__item {

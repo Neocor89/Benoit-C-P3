@@ -113,25 +113,49 @@
 
 //  ANIMATION RESTAURANTS SLIDE UP APPARITION  //
 
-.menu__description article {
-  animation: slideup 0.9s ease-in-out;
+.menu__item {
+  animation: slideup 1s forwards;
 }
+.menu__item:nth-child(2) {
+  animation-delay: 300ms;
+}
+.menu__item:nth-child(3) {
+  animation-delay: 400ms;
+}
+.menu__item:nth-child(4) {
+  animation-delay: 500ms;
+}
+.menu__item:nth-child(5) {
+  animation-delay: 600ms;
+}
+.menu__item:nth-child(6) {
+  animation-delay: 700ms;
+}
+.menu__item:nth-child(7) {
+  animation-delay: 900ms;
+}
+.menu__item:nth-child(8) {
+  animation-delay: 1000ms;
+}
+.menu__item:nth-child(9) {
+  animation-delay: 900ms;
+}
+
 
 
 @keyframes slideup {
   0% {
-    transform: translatey(-170px);
-    opacity: 0;
+    transform: translatey(-120px);
+    opacity: 0%; 
   }
   50% {
-      opacity: 0.5;
+    opacity: 50%; 
   }
   100% {
       transform: translatey(0px);
-      opacity: 1;
+      opacity: 100%;
   }
 }
-
 
 
 
@@ -225,7 +249,7 @@
     @include flexible;
     transition: 0.4s ease-in-out;
 }
-.menu__item:hover .menu__item__confirmation {
+.menu__item:hover .menu__item__confirmation  {
     width: 18%;
     transition: 0.4s ease-in;
     opacity: 1;
@@ -233,14 +257,33 @@
       width: 20%;
     }
 }
+
 span.check__icon {
   color: $color-white;
   font-size: 2.3rem;
+  transform: rotate(0deg);
   @include mobile-only {
     font-size: 1.9rem;
   }
 }
-.check__icon:hover {   
-  transform: rotate(360deg);
-  transition: 0.4s ease-in-out;
-}
+// .menu__item__confirmation + .check__icon:hover  {
+//   transform: rotate(360deg);
+//   transition: 0.3s ease-in-out;
+// }
+
+// .menu__item__confirmation:hover + .check__icon  {
+//   transform: rotate(360deg);
+//   transition: 0.3s ease-in-out;
+// }
+
+// .menu__item:hover + span.check__icon:hover {
+//   transform: rotate(360deg);
+//   transition: 0.3s ease-in-out;
+// }
+
+
+
+// .check__icon:hover {   
+//   transform: rotate(360deg);
+//   transition: 0.3s ease-in-out;
+// }
