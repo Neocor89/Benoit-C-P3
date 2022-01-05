@@ -256,34 +256,25 @@
     @include mobile-only {
       width: 20%;
     }
+    .check__icon {
+      animation: rotating 0.5s ease-in-out;
+    }
 }
 
 span.check__icon {
   color: $color-white;
   font-size: 2.3rem;
-  transform: rotate(0deg);
   @include mobile-only {
     font-size: 1.9rem;
   }
 }
-// .menu__item__confirmation + .check__icon:hover  {
-//   transform: rotate(360deg);
-//   transition: 0.3s ease-in-out;
-// }
-
-// .menu__item__confirmation:hover + .check__icon  {
-//   transform: rotate(360deg);
-//   transition: 0.3s ease-in-out;
-// }
-
-// .menu__item:hover + span.check__icon:hover {
-//   transform: rotate(360deg);
-//   transition: 0.3s ease-in-out;
-// }
 
 
-
-// .check__icon:hover {   
-//   transform: rotate(360deg);
-//   transition: 0.3s ease-in-out;
-// }
+@keyframes rotating {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
